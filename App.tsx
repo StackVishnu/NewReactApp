@@ -1,5 +1,5 @@
-import Message from "./message";
 import ListGroup from "./components/ListGroup";
+import React from "react";
 
 function App() {
   return (
