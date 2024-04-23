@@ -1,0 +1,45 @@
+.navbar {
+  /* Assign the grid area for the Navbar */
+
+  display: grid;
+  position: fixed;
+  left: 0;
+  grid-template-rows: 1fr 7fr;
+  width: min-content;
+  height: 100vh;
+  padding: 0.5rem;
+  z-index: 1;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+}
+
+.logo {
+  display: grid;
+  height: auto;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+}
+.logo img {
+  height: auto;
+  width: 80%;
+  max-width: 10vw;
+}
+.navbar-icon-container {
+  display: absolute;
+  align-items: left;
+  justify-content: left;
+  grid-template-rows: auto;
+  height: fit-content;
+}
+.navbar-icon-container ul {
+  padding: 0.1rem;
+  margin: 0.1rem;
+}
+.navbar-icons {
+  padding: 1rem;
+  transition: transform 0.3s ease; /* Adding a smooth transition */
+}
+
+.navbar-icons:hover {
+  transform: scale(1.2); /* Zoom effect on hover */
+}
