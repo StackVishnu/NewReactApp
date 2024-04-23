@@ -11,7 +11,7 @@ import category from "../../assets/category_icon.svg";
 function NavBar() {
   return (
     <>
-      <div className="navbar">
+      <nav className="navbar">
         <div className="logo">
           <img src={logo} className="disney" alt="" />
         </div>
@@ -19,6 +19,7 @@ function NavBar() {
           <ul>
             <li>
               <img src={first} className="navbar-icons" alt="icon" />
+              <span className="link-text"> My Space</span>
             </li>
             <li>
               <img src={search} className="navbar-icons" alt="icon" />
@@ -40,7 +41,7 @@ function NavBar() {
             </li>
           </ul>
         </div>
-      </div>
+      </nav>
     </>
   );
 }

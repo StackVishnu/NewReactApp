@@ -1,6 +1,4 @@
 .navbar {
-  /* Assign the grid area for the Navbar */
-
   display: grid;
   position: fixed;
   left: 0;
@@ -10,9 +8,11 @@
   padding: 1rem;
   z-index: 1;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+
 }
 
 .logo {
+
   display: grid;
   height: auto;
   width: auto;
@@ -20,14 +20,11 @@
   justify-content: center;
 }
 .logo img {
+    position: absolute;
   height: auto;
   width: auto;
 }
 .navbar-icon-container {
-  display: absolute;
-  align-items: left;
-  justify-content: left;
-  grid-template-rows: auto;
   height: fit-content;
 }
 .navbar-icon-container ul {
@@ -35,11 +32,35 @@
   margin: 0.1rem;
   list-style: none;
 }
+
+.navbar-icon-container ul li {
+  display: grid; /* Use grid layout for list items */
+  grid-template-columns: auto auto; /* Two columns: one for the icon, one for the text */
+  align-items: center; /* Align items vertically in the center */
+  gap: 0.1rem; /* Add some gap between the icon and text */
+  
+}
+.link-text{
+  display: none;
+  color: white;
+  align-self: center; 
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.1); /
+}
 .navbar-icons {
   padding: 1rem;
   transition: transform 0.3s ease; /* Adding a smooth transition */
 }
 
-.navbar-icons:hover {
-  transform: scale(1.2); /* Zoom effect on hover */
+.navbar:hover {
+  width: 10rem;
+
+}
+.navbar:hover .link-text{
+  display: block;
+
+}
+
+.navbar-icons:hover,
+.navbar-icons:hover .link-text {
+  transform: scale(1.3);
 }
