@@ -1,16 +1,14 @@
-import NavBar from './NavBar/NavBar'
-import './App.css'
-import MainPage from './mainPage/mainPage'
+import NavBar from "./components/NavBar/NavBar.jsx";
+import "./App.css";
+import MainPage from "./components/mainPage/mainPage.jsx";
 
 function App() {
-  
-
   return (
     <>
-    <NavBar/>
-    <MainPage/>
+      <NavBar />
+      <MainPage />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
