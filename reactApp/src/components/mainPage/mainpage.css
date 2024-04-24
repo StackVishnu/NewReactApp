@@ -1,0 +1,10 @@
+.main-page {
+  z-index: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.main-page video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
