@@ -6,7 +6,7 @@ function VideoTitle(){
         <>
          <div className='title'>
              <img src={titleCard} alt="image" className='title-card' /> 
-             <h4 className='movie-specs'> 2012 2h24m 4 languages </h4>          
+             <h4 className='movie-specs'> 2012 <span class="dot"></span>2h24m <span class="dot"></span> 4 languages <span class="dot"></span> U/A 16+ </h4>          
          </div>
          <div className='description'>
             <div className='description-text'>

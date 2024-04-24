@@ -1,93 +1,97 @@
-.title{
-    top: 8vh;
-    left: 18vh;
-    position: absolute;
+.title {
+  top: 8vh;
+  left: 18vh;
+  position: absolute;
 }
-.title h4{
-    position: relative;
-    top: 2vh;
-}
-
-.description{
-    top: 40vh;
-    left: 18vh;
-    display: flex;
-    /* Set flex-direction to column to stack child elements vertically */
-    flex-direction: column;
-    position: absolute;
-}
-.description-text{
-    width: 30vw;
-}
-.movie-specs{
-    word-wrap: break-word;
-    color:white;
-    font-family: 'Roboto', sans-serif;
-    opacity: 0.8;
-    font-weight: 1000;
-    font-size: medium;
-    opacity: 0.8;
+.title h4 {
+  position: relative;
+  top: 2vh;
 }
 
- p{
-    word-wrap: break-word;
-    color:white;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    opacity: 0.8;
+.description {
+  top: 40vh;
+  left: 18vh;
+  display: flex;
+  /* Set flex-direction to column to stack child elements vertically */
+  flex-direction: column;
+  position: absolute;
 }
-.subscribe-button{
-    position: relative;
-    top: 10vh;
-    
-    overflow: hidden;
+.description-text {
+  width: 30vw;
+}
+.movie-specs {
+  word-wrap: break-word;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  opacity: 0.8;
+  font-weight: 700;
+  font-size: medium;
+  opacity: 0.8;
+}
 
+p {
+  word-wrap: break-word;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  opacity: 0.8;
+}
+.subscribe-button {
+  position: relative;
+  top: 8vh;
+
+  overflow: hidden;
 }
 .title-card {
+  display: grid;
+  height: 20vh;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+}
+.title-card img {
+  height: auto;
+  width: auto;
+  object-fit: cover;
+}
 
-    display: grid;
-    height: 20vh;
-    width: auto;
-    align-items: center;
-    justify-content: center;
-  }
-  .title-card img{
-    height: auto;
-    width: auto;
-    object-fit: cover;
-  }
-
-
-.description-text h4{
-
-    word-wrap: break-word;
-    color:white;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 1000;
-    font-size: smaller;
-    opacity: 0.8;
+.description-text h4 {
+  word-wrap: break-word;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: smaller;
+  opacity: 0.8;
 }
 
 .subscribe-button .button-4 {
-    appearance: none;
-    background-color: rgba(250, 251, 252, 0.3);
-    border: 1px solid rgba(27, 31, 35, 0.15);
-    border-radius: 6px;
-    box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
-    box-sizing: border-box;
-    color: #ffffff;
-    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 20px;
-    list-style: none;
-    padding: 2vh 8vw;
-  
-
+  appearance: none;
+  background-color: rgba(250, 251, 252, 0.336);
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 20px;
+  list-style: none;
+  padding: 2vh 8vw;
 }
 
 .button-4:hover {
   transform: scale(1.005);
   transition-duration: 0.5s;
 }
-
+.dot {
+  height: auto;
+  width: auto;
+  padding: 0.1rem;
+  margin: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
