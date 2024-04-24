@@ -1,6 +1,6 @@
 .title {
   top: 8vh;
-  left: 18vh;
+  left: 20vh;
   position: absolute;
 }
 .title h4 {
@@ -39,8 +39,6 @@ p {
 .subscribe-button {
   position: relative;
   top: 8vh;
-
-  overflow: hidden;
 }
 .title-card {
   display: grid;
@@ -78,7 +76,7 @@ p {
   font-weight: 600;
   line-height: 20px;
   list-style: none;
-  padding: 2vh 8vw;
+  padding: 2vh 5vw;
 }
 
 .button-4:hover {
