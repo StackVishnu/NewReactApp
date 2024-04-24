@@ -75,14 +75,14 @@ p {
   color: #ffffff;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 20px;
   list-style: none;
   padding: 2vh 8vw;
 }
 
 .button-4:hover {
-  transform: scale(1.005);
+  transform: scale(1.05);
   transition-duration: 0.5s;
 }
 .dot {
