@@ -1,10 +1,13 @@
-import video from "../../assets/Reel Teaser videos _ Teaser Template.mp4";
+import video from "../../assets/avengers.webm";
+import VideoTitle from "../videotitle/videotitle";
+import './mainpage.css'
 function MainPage() {
   return (
     <>
       <div className="main-page">
         <div className="video-player">
-          <video src={video} autoPlay loop type="video/mp4"></video>
+          <video src={video} autoPlay loop muted type="video/mp4"></video>
+          <VideoTitle/>
         </div>
       </div>
     </>

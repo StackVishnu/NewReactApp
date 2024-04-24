@@ -23,21 +23,27 @@ function NavBar() {
             </li>
             <li>
               <img src={search} className="navbar-icons" alt="icon" />
+              <span className="link-text"> Search</span>
             </li>
             <li>
               <img src={home} className="navbar-icons" alt="icon" />
+              <span className="link-text"> Home</span>
             </li>
             <li>
               <img src={tv} className="navbar-icons" alt="icon" />
+              <span className="link-text"> TV </span>
             </li>
             <li>
               <img src={movie} className="navbar-icons" alt="icon" />
+              <span className="link-text"> Movie</span>
             </li>
             <li>
               <img src={sports} className="navbar-icons" alt="icon" />
+              <span className="link-text"> Sports</span>
             </li>
             <li>
               <img src={category} className="navbar-icons" alt="icon" />
+              <span className="link-text"> Categories</span>
             </li>
           </ul>
         </div>

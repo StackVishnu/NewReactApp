@@ -1,10 +1,24 @@
 .main-page {
-  z-index: 0;
   display: grid;
-  grid-template-columns: 1fr;
+  z-index: 0;
+  grid-template-columns: auto; /* One column */
+  grid-auto-rows: auto;
+  width: 100vw; 
+  
 }
 .main-page video {
+
   width: 100%;
   height: 100%;
   object-fit: cover;
+  
+
 }
+.video-player{
+  display: flex;
+  height: 90vh;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+}
+

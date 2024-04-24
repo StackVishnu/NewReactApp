@@ -8,6 +8,7 @@
   padding: 1rem;
   z-index: 1;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+  transition:width 200ms ease;
 
 }
 
@@ -53,14 +54,15 @@
 
 .navbar:hover {
   width: 10rem;
-
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
 }
 .navbar:hover .link-text{
   display: block;
+  transition: transform 0.3s ease;
 
 }
 
 .navbar-icons:hover,
-.navbar-icons:hover .link-text {
+.navbar-icons:hover span {
   transform: scale(1.3);
 }
