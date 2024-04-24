@@ -3,9 +3,13 @@
     left: 18vh;
     position: absolute;
 }
+.title h4{
+    position: relative;
+    top: 2vh;
+}
 
 .description{
-    top: 35vh;
+    top: 40vh;
     left: 18vh;
     display: flex;
     /* Set flex-direction to column to stack child elements vertically */
@@ -21,7 +25,7 @@
     font-family: 'Roboto', sans-serif;
     opacity: 0.8;
     font-weight: 1000;
-    font-size: smaller;
+    font-size: medium;
     opacity: 0.8;
 }
 
@@ -33,10 +37,10 @@
     opacity: 0.8;
 }
 .subscribe-button{
-
-    bottom: 15vh;
-    left:18vh;
     position: relative;
+    top: 10vh;
+    
+    overflow: hidden;
 
 }
 .title-card {
@@ -48,16 +52,14 @@
     justify-content: center;
   }
   .title-card img{
-    position: absolute;
     height: auto;
     width: auto;
     object-fit: cover;
   }
 
-.genre-text{
-    width: 30vw;
-}
-.genre-text h4{
+
+.description-text h4{
+
     word-wrap: break-word;
     color:white;
     font-family: 'Roboto', sans-serif;
@@ -67,19 +69,20 @@
 }
 
 .subscribe-button .button-4 {
-  appearance: none;
-  background-color: rgba(250, 251, 252, 0.3);
-  border: 1px solid rgba(27, 31, 35, 0.15);
-  border-radius: 6px;
-  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
-  box-sizing: border-box;
-  color: #ffffff;
-  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 20px;
-  list-style: none;
-  padding: 2vh 8vw;
+    appearance: none;
+    background-color: rgba(250, 251, 252, 0.3);
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    padding: 2vh 8vw;
+  
 
 }
 
