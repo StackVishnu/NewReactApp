@@ -21,7 +21,7 @@
 }
 .movie-specs {
   word-wrap: break-word;
-  color: rgba(216, 216, 216, 0.87);
+  color: rgba(216, 216, 216, 0.938);
   font-family: "Roboto", sans-serif;
   opacity: 0.8;
   font-weight: 700;
@@ -32,7 +32,7 @@
 
 p {
   word-wrap: break-word;
-  color: rgba(216, 216, 216, 0.753);
+  color: rgba(255, 255, 255, 0.87);
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   opacity: 0.8;
@@ -56,48 +56,44 @@ p {
 
 .description-text h4 {
   word-wrap: break-word;
-  color: rgba(216, 216, 216, 0.87);
+  color: rgba(253, 253, 253, 0.904);
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: small;
+  font-size: medium;
   opacity: 0.8;
 }
 
 .subscribe-button .button-4 {
-  appearance: none;
-  background-color: rgba(250, 251, 252, 0.336);
-  border: 1px solid rgba(27, 31, 35, 0.15);
-  border-radius: 6px;
-  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
-    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
-  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.226);
+  border-radius: 0.5rem;
   color: #ffffff;
+  border: none;
+  padding: 2.5vh 6vw;
+
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  line-height: 20px;
-  list-style: initial;
-  padding: 2vh 5vw;
+  cursor: pointer;
+
   margin-right: 1rem;
 }
 .subscribe-button .button-5 {
-  appearance: none;
-  background-color: rgba(250, 251, 252, 0.336);
-  border: 1px solid rgba(27, 31, 35, 0.15);
-  border-radius: 6px;
-  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
-    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
-  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.226);
+  border-radius: 0.5rem;
   color: #ffffff;
+  border: none;
+  padding: 2.5vh 6vw;
+
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  font-weight: 600;
-  padding: 2vh 1.5vw;
+  font-weight: 800;
+  padding: 2.5vh 1.5vw;
   /* Adjust padding to control button size */
   line-height: initial;
 }
 
-.button-4:hover {
+.button-4:hover,
+.button-5:hover {
   transform: scale(1.05);
   transition-duration: 0.5s;
 }

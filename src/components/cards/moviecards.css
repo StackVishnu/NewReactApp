@@ -2,20 +2,33 @@
   display: grid;
   position: relative;
   left: 18vh;
-  padding: 1rem;
+  padding-bottom: 1rem;
 }
+.genre-text h5 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .movie-grid {
   display: grid;
   grid-auto-flow: column;
-  gap: 10px;
   overflow-x: auto;
 }
+.movie-grid > * {
+  max-width: 10vw; /* Adjust the value as needed */
+}
 .card {
-  width: 10vw;
+  width: 13vw;
   height: 30vh;
 }
 .card img {
-  width: 100%;
   height: 100%;
+  width: 100%;
   object-fit: contain;
+}
+.movie-cards h5 {
+  color: rgba(219, 217, 217, 0.911);
+  font-size: large;
+  font-weight: bolder;
+  font-family: Arial, sans-serif;
 }

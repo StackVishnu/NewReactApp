@@ -27,6 +27,10 @@ const MovieCards = ()=>{
 
     return(
         <div className='movie-cards' id='movie-cards'>
+            <div className='genre-text'>
+                <h5 >Mystery</h5>
+            </div>
+            
             <div className='movie-grid'>
             {movieArr.map((movie, index) => (
                     <React.Fragment key={index}>
