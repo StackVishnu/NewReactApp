@@ -1,6 +1,6 @@
 #root {
   display: grid;
-
-  }
-
-
+}
+.navbar {
+  transition: width 200ms ease;
+}

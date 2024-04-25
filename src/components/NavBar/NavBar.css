@@ -1,6 +1,7 @@
 .navbar {
   display: grid;
   position: fixed;
+
   left: 0;
   grid-template-rows: 1fr 7fr;
   width: min-content;
@@ -8,12 +9,9 @@
   padding: 1rem;
   z-index: 4;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
-  transition:width 200ms ease;
-
 }
 
 .logo {
-
   display: grid;
   height: auto;
   width: auto;
@@ -21,7 +19,7 @@
   justify-content: center;
 }
 .logo img {
-    position: absolute;
+  position: absolute;
   height: auto;
   width: auto;
 }
@@ -40,30 +38,19 @@
   grid-template-columns: auto auto; /* Two columns: one for the icon, one for the text */
   align-items: center; /* Align items vertically in the center */
   gap: 0.1rem; /* Add some gap between the icon and text */
-  
 }
-.link-text{
+.link-text {
   display: none;
   color: white;
-  align-self: center; 
-  text-shadow: 0 0 1px rgba(255, 255, 255, 0.1); /
+  align-self: center;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
 }
 .navbar-icons {
   padding: 1rem;
-  transition: transform 0.3s ease; /* Adding a smooth transition */
 }
-
-.navbar:hover {
-  width: 10rem;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+.navbar.hovered {
+  width: 16rem;
 }
-.navbar:hover .link-text{
+.navbar.hovered .link-text {
   display: block;
-  transition: transform 0.3s ease;
-
-}
-
-.navbar-icons:hover,
-.navbar-icons:hover span {
-  transform: scale(1.3);
 }

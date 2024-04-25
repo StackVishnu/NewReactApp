@@ -7,11 +7,26 @@ import tv from "../../assets/tv_icon.svg";
 import movie from "../../assets/movie_icon.svg";
 import sports from "../../assets/sport_icon.svg";
 import category from "../../assets/category_icon.svg";
+import { useState } from "react";
 
 function NavBar() {
+  const [isHovered,setIsHovered] = useState(false)
+  const handleMouseEnter = ()=>{
+    setIsHovered(true)
+  }
+  const handleMouseExit = ()=>{
+    setIsHovered(false)
+  } 
+
+
   return (
     <>
-      <nav className="navbar">
+ 
+      <nav className={`navbar ${isHovered ? 'hovered' : ''}`}
+              onMouseEnter={handleMouseEnter} 
+              onMouseLeave={handleMouseExit}
+              
+      >
         <div className="logo">
           <img src={logo} className="disney" alt="" />
         </div>
@@ -50,6 +65,7 @@ function NavBar() {
       </nav>
     </>
   );
+  
 }
 export default NavBar;
 {
