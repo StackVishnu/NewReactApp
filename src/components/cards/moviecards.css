@@ -12,12 +12,12 @@
 .movie-grid {
   display: grid;
   grid-auto-flow: column;
-  overflow-x: auto;
 }
 .movie-grid > * {
   max-width: 10vw; /* Adjust the value as needed */
 }
 .card {
+  border-radius: 10px;
   width: 13vw;
   height: 30vh;
 }
@@ -33,12 +33,12 @@
   font-family: Arial, sans-serif;
 }
 
-.movie-grid::-webkit-scrollbar {
-  width: 12px; /* Set width of the scrollbar */
+/* .movie-grid::-webkit-scrollbar {
+  width: 12px; 
 }
 .movie-grid::-webkit-scrollbar-track {
-  background: #ffffff00; /* Set background color of the scrollbar track */
-}
+  background: #ffffff00;
+} */
 .popup {
   transition: transform 200ms ease;
 }
