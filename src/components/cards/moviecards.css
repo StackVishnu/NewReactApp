@@ -12,6 +12,7 @@
 .movie-grid {
   display: grid;
   grid-auto-flow: column;
+  overflow-x: auto;
 }
 .movie-grid > * {
   max-width: 10vw; /* Adjust the value as needed */
@@ -43,7 +44,7 @@
   transition: transform 200ms ease;
 }
 .popup:hover {
-  transform: scale(2);
+  transform: scale(1.5);
   z-index: 4;
 }
 .popup:hover .movie-grid {
