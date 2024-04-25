@@ -19,7 +19,7 @@ const MovieCards = ()=>{
     const createCard = (movieData) => {
         return (
             <div className='card'>
-                <img src={movieData.posterURL} alt="image" />
+                <img src={movieData.posterURL} alt="image" className='popup' />
             </div>
             ) 
             

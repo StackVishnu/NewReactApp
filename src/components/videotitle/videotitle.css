@@ -98,8 +98,6 @@ p {
   transition-duration: 0.5s;
 }
 .dot {
-  height: auto;
-  width: auto;
   padding: 0.1rem;
   margin: 5px;
   background-color: rgba(216, 216, 216, 0.589);

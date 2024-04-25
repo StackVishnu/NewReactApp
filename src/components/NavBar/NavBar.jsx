@@ -29,6 +29,9 @@ function NavBar() {
       >
         <div className="logo">
           <img src={logo} className="disney" alt="" />
+          <div className="sub">
+            <button>subscribe </button>
+          </div>
         </div>
         <div className="navbar-icon-container">
           <ul>
