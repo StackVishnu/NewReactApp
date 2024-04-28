@@ -1,0 +1,34 @@
+.movie-cards {
+  display: grid;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 85vw;
+  height: 35vh;
+  margin: 0 auto;
+}
+
+.movie-poster {
+  height: 35vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.movie-poster img {
+  border-radius: 0.5rem;
+  max-width: 100%; /* Ensure images scale down proportionally */
+  max-height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and fit within the container */
+}
+.movie-cards h5 {
+  color: rgba(219, 217, 217, 0.911);
+  font-size: large;
+  font-weight: bolder;
+  font-family: Arial, sans-serif;
+}

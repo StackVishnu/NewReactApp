@@ -14,36 +14,51 @@ function NavBar() {
       <nav className="navbar">
         <div className="logo">
           <img src={logo} className="disney" alt="" />
+          <button className="subscribe-logo">subscribe </button>
         </div>
         <div className="navbar-icon-container">
           <ul>
             <li>
-              <img src={first} className="navbar-icons" alt="icon" />
-              <span className="link-text"> My Space</span>
+              <div className="icon-container">
+                <img src={first} className="navbar-icons" alt="icon" />
+                <span className="link-text">My Space</span>
+              </div>
             </li>
             <li>
-              <img src={search} className="navbar-icons" alt="icon" />
-              <span className="link-text"> Search</span>
+              <div className="icon-container">
+                <img src={search} className="navbar-icons" alt="icon" />
+                <span className="link-text">Search</span>
+              </div>
             </li>
             <li>
-              <img src={home} className="navbar-icons" alt="icon" />
-              <span className="link-text"> Home</span>
+              <div className="icon-container">
+                <img src={home} className="navbar-icons" alt="icon" />
+                <span className="link-text">Home</span>
+              </div>
             </li>
             <li>
-              <img src={tv} className="navbar-icons" alt="icon" />
-              <span className="link-text"> TV </span>
+              <div className="icon-container">
+                <img src={tv} className="navbar-icons" alt="icon" />
+                <span className="link-text">TV</span>
+              </div>
             </li>
             <li>
-              <img src={movie} className="navbar-icons" alt="icon" />
-              <span className="link-text"> Movie</span>
+              <div className="icon-container">
+                <img src={movie} className="navbar-icons" alt="icon" />
+                <span className="link-text">Movie</span>
+              </div>
             </li>
             <li>
-              <img src={sports} className="navbar-icons" alt="icon" />
-              <span className="link-text"> Sports</span>
+              <div className="icon-container">
+                <img src={sports} className="navbar-icons" alt="icon" />
+                <span className="link-text">Sports</span>
+              </div>
             </li>
             <li>
-              <img src={category} className="navbar-icons" alt="icon" />
-              <span className="link-text"> Categories</span>
+              <div className="icon-container">
+                <img src={category} className="navbar-icons" alt="icon" />
+                <span className="link-text">Category</span>
+              </div>
             </li>
           </ul>
         </div>

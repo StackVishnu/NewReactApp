@@ -27,14 +27,17 @@
   font-weight: 700;
   font-size: medium;
   opacity: 0.8;
+  line-height: 1.5; /* Adjust line spacing */
+  letter-spacing: 0.1rem;
 }
 
 p {
-  word-wrap: break-word;
-  color: white;
+  color: rgba(255, 255, 255, 0.912);
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  opacity: 0.8;
+  opacity: 1;
+  line-height: 1.5; /* Adjust line spacing */
+  letter-spacing: 0.1rem;
 }
 .subscribe-button {
   position: relative;
@@ -54,40 +57,52 @@ p {
 }
 
 .description-text h4 {
-  word-wrap: break-word;
-  color: white;
+  color: rgb(255, 255, 255);
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: smaller;
+  font-size: medium;
   opacity: 0.8;
+  line-height: 1.5rem; /* Adjust line spacing */
+  letter-spacing: 0.1rem;
+}
+.subscribe-button {
+  top: 1vh;
+}
+
+.subscribe-button .button-5 {
+  background-color: rgba(255, 255, 255, 0.226);
+  border-radius: 0.5rem;
+  color: #ffffff;
+  border: none;
+  margin-left: 1vw;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  font-size: larger;
+  padding: 2.4vh 1.3vw;
 }
 
 .subscribe-button .button-4 {
-  appearance: none;
-  background-color: rgba(250, 251, 252, 0.336);
-  border: 1px solid rgba(27, 31, 35, 0.15);
-  border-radius: 6px;
-  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
-    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
-  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.226);
+  border: none;
+  border-radius: 0.5rem;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  line-height: 20px;
-  list-style: none;
-  padding: 2vh 5vw;
+  font-size: large;
+  padding: 2.5vh 7vw;
 }
 
-.button-4:hover {
+.button-4:hover,
+.button-5:hover {
   transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.477);
   transition-duration: 0.5s;
 }
 .dot {
-  height: auto;
-  width: auto;
   padding: 0.1rem;
-  margin: 5px;
+  margin: 0.2rem;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;

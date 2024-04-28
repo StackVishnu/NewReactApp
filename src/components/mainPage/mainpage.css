@@ -1,22 +1,23 @@
 .main-page {
   display: grid;
+  grid-template-rows: auto;
   z-index: 0;
   grid-template-columns: auto; /* One column */
   grid-auto-rows: auto;
-  width: 100vw; 
-  
+  width: 100vw;
 }
 .main-page video {
-
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
-
 }
-.video-player{
+.video-player {
   display: flex;
   height: 90vh;
   flex-direction: column;
 }
-
+.card-row {
+  max-width: 100vh;
+  position: relative;
+  left: 24vh;
+}
