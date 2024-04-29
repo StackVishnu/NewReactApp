@@ -2,6 +2,7 @@
   display: grid;
   position: relative;
   padding-bottom: 1rem;
+  left: 2vw;
 }
 
 .slider-container {
@@ -32,4 +33,8 @@
   font-weight: bolder;
   font-family: Arial, sans-serif;
   margin: 1rem;
+}
+.genre-text {
+  position: relative;
+  left: 5vw;
 }

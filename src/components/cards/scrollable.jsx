@@ -18,7 +18,7 @@ const Scrollable = () => {
   }, []);
 
   var settings = {
-    dots: true,
+    dots: false,
     infinite: false,
     speed: 600,
     slidesToShow: 7,

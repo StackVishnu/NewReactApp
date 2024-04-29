@@ -1,4 +1,4 @@
-.main-page {
+.scroll-container {
   display: grid;
   grid-template-rows: auto;
   z-index: 0;
@@ -6,18 +6,29 @@
   grid-auto-rows: auto;
   width: 100vw;
 }
-.main-page video {
-  width: 100%;
+
+.video-player {
+  z-index: -1;
+  position: sticky;
+  top: 0;
+}
+.video-player video {
+  position: relative;
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
-.video-player {
-  display: flex;
-  height: 90vh;
-  flex-direction: column;
-}
+
 .card-row {
-  max-width: 100vh;
+  width: 100%;
   position: relative;
-  left: 24vh;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 0.9) 50%,
+    rgba(0, 0, 0, 0.5) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
