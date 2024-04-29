@@ -11,6 +11,12 @@ const MovieCards = () => {
 
       <div className="movie-grid">
         <Scrollable></Scrollable>
+
+        <div className="genre-text">
+          <h5>Latest Uploads</h5>
+        </div>
+
+        <Scrollable></Scrollable>
       </div>
     </div>
   );

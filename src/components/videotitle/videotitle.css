@@ -20,7 +20,6 @@
   width: 30vw;
 }
 .movie-specs {
-  word-wrap: break-word;
   color: white;
   font-family: "Roboto", sans-serif;
   opacity: 0.8;
@@ -32,12 +31,11 @@
 }
 
 p {
-  color: rgba(255, 255, 255, 0.912);
+  color: rgba(255, 255, 255, 0.801);
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   opacity: 1;
   line-height: 1.5; /* Adjust line spacing */
-  letter-spacing: 0.1rem;
 }
 .subscribe-button {
   position: relative;
@@ -63,7 +61,6 @@ p {
   font-size: medium;
   opacity: 0.8;
   line-height: 1.5rem; /* Adjust line spacing */
-  letter-spacing: 0.1rem;
 }
 .subscribe-button {
   top: 1vh;

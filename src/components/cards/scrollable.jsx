@@ -18,12 +18,14 @@ const Scrollable = () => {
   }, []);
 
   var settings = {
+    className: "",
     dots: false,
     infinite: false,
     speed: 600,
-    slidesToShow: 8,
+    slidesToShow: 7,
     slidesToScroll: 4,
     initialSlide: 0,
+        adaptiveHeight: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -51,12 +53,22 @@ const Scrollable = () => {
       },
     ],
   };
+
+
+
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        {movieArr.map((d) => (
+        {movieArr.map((d, index) => (
           <div key={d.id} className="movie-poster">
             <img src={d.posterURL} alt="movie poster" />
+            <div className="hover-content">
+              <div className="expanded">
+              <img src={d.posterURL} alt="movie poster" />
+              <button>button</button>
+              <p>{d.description}</p>
+              </div>
+            </div>
           </div>
         ))}
       </Slider>

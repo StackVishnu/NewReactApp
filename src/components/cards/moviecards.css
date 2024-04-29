@@ -10,7 +10,8 @@
   position: relative;
   max-width: 88vw;
   height: 35vh;
-  margin: 0 auto;
+  left: 5vw;
+  margin: 0 0 5rem 0;
 }
 
 .movie-poster {
@@ -32,4 +33,27 @@
 }
 .genre-text h5 {
   padding-left: 5rem;
+}
+.movie-poster {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+}
+
+.movie-poster:hover {
+  transform: scale(1.6);
+
+  z-index: 5;
+}
+
+.movie-poster:hover .hover-content {
+  opacity: 1;
+}
+
+.expanded {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+}
+.slick-list {
+  overflow-y: visible !important;
 }
