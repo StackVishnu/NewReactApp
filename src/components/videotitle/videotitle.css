@@ -28,14 +28,17 @@
   color: rgba(216, 216, 216, 0.87);
   font-size: medium;
   opacity: 0.8;
+  line-height: 1.5; /* Adjust line spacing */
+  letter-spacing: 0.1rem;
 }
 
 p {
-  word-wrap: break-word;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(255, 255, 255, 0.912);
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  opacity: 0.8;
+  opacity: 1;
+  line-height: 1.5; /* Adjust line spacing */
+  letter-spacing: 0.1rem;
 }
 .subscribe-button {
   position: relative;
@@ -55,16 +58,34 @@ p {
 }
 
 .description-text h4 {
-  word-wrap: break-word;
-  color: rgba(253, 253, 253, 0.904);
+  color: rgb(255, 255, 255);
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: medium;
   opacity: 0.8;
+  line-height: 1.5rem; /* Adjust line spacing */
+  letter-spacing: 0.1rem;
+}
+.subscribe-button {
+  top: 1vh;
+}
+
+.subscribe-button .button-5 {
+  background-color: rgba(255, 255, 255, 0.226);
+  border-radius: 0.5rem;
+  color: #ffffff;
+  border: none;
+  margin-left: 1vw;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  font-size: larger;
+  padding: 2.4vh 1.3vw;
 }
 
 .subscribe-button .button-4 {
   background-color: rgba(255, 255, 255, 0.226);
+  border: none;
   border-radius: 0.5rem;
   color: #ffffff;
   border: none;
@@ -73,34 +94,20 @@ p {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  cursor: pointer;
-
-  margin-right: 1rem;
-}
-.subscribe-button .button-5 {
-  background-color: rgba(255, 255, 255, 0.226);
-  border-radius: 0.5rem;
-  color: #ffffff;
-  border: none;
-  padding: 2.5vh 6vw;
-
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-weight: 800;
-  padding: 2.5vh 1.5vw;
-  /* Adjust padding to control button size */
-  line-height: initial;
+  font-size: large;
+  padding: 2.5vh 7vw;
 }
 
 .button-4:hover,
 .button-5:hover {
   transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.477);
   transition-duration: 0.5s;
 }
 .dot {
   padding: 0.1rem;
-  margin: 5px;
-  background-color: rgba(216, 216, 216, 0.589);
+  margin: 0.2rem;
+  background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   position: relative;

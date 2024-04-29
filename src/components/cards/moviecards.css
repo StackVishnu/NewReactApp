@@ -1,52 +1,35 @@
 .movie-cards {
   display: grid;
   position: relative;
-  left: 18vh;
   padding-bottom: 1rem;
 }
-.genre-text h5 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+
+.slider-container {
+  position: relative;
+  max-width: 85vw;
+  height: 35vh;
+  margin: 0 auto;
 }
 
-.movie-grid {
-  display: grid;
-  grid-auto-flow: column;
-  overflow-x: auto;
+.movie-poster {
+  height: 35vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
-.movie-grid > * {
-  max-width: 10vw; /* Adjust the value as needed */
-}
-.card {
-  border-radius: 10px;
-  width: 13vw;
-  height: 30vh;
-}
-.card img {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
+
+.movie-poster img {
+  border-radius: 0.5rem;
+  max-width: 100%; /* Ensure images scale down proportionally */
+  max-height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and fit within the container */
 }
 .movie-cards h5 {
   color: rgba(219, 217, 217, 0.911);
   font-size: large;
   font-weight: bolder;
   font-family: Arial, sans-serif;
-}
-
-/* .movie-grid::-webkit-scrollbar {
-  width: 12px; 
-}
-.movie-grid::-webkit-scrollbar-track {
-  background: #ffffff00;
-} */
-.popup {
-  transition: transform 200ms ease;
-}
-.popup:hover {
-  transform: scale(1.5);
-  z-index: 4;
-}
-.popup:hover .movie-grid {
-  overflow: visible;
+  margin: 1rem;
 }
