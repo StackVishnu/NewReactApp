@@ -1,7 +1,6 @@
 .navbar {
   display: grid;
   position: fixed;
-
   left: 0;
   grid-template-rows: 1fr 7fr;
   width: 5vw;
@@ -46,28 +45,8 @@
   cursor: pointer;
   padding: 0.2rem 0.6rem;
 }
-.logo button {
-  position: absolute;
-  border: none;
-  left: 2vh;
-  top: 14vh;
-  height: min-content;
-  width: min-content;
-  border-radius: 0.5rem;
-  background-color: #ff990021;
-  font-size: small;
-  font-style: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 500;
-  color: #ffae00c9;
-}
-.sub {
-  margin-bottom: 12vh;
-}
 
 .navbar-icon-container {
-  position: relative;
-  top: 5vh;
   height: fit-content;
 }
 

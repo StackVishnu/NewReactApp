@@ -21,11 +21,10 @@
 }
 .movie-specs {
   word-wrap: break-word;
-  color: rgba(216, 216, 216, 0.938);
+  color: white;
   font-family: "Roboto", sans-serif;
   opacity: 0.8;
   font-weight: 700;
-  color: rgba(216, 216, 216, 0.87);
   font-size: medium;
   opacity: 0.8;
   line-height: 1.5; /* Adjust line spacing */
@@ -88,9 +87,6 @@ p {
   border: none;
   border-radius: 0.5rem;
   color: #ffffff;
-  border: none;
-  padding: 2.5vh 6vw;
-
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 600;
