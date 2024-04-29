@@ -4,7 +4,7 @@
   z-index: 0;
   grid-template-columns: auto; /* One column */
   grid-auto-rows: auto;
-  width: 100vw;
+  width: 100%;
 }
 
 .video-player {

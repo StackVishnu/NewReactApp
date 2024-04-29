@@ -21,7 +21,7 @@ const Scrollable = () => {
     dots: false,
     infinite: false,
     speed: 600,
-    slidesToShow: 7,
+    slidesToShow: 8,
     slidesToScroll: 4,
     initialSlide: 0,
     responsive: [

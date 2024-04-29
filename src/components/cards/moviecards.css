@@ -1,24 +1,20 @@
 .movie-cards {
   display: grid;
+  grid-template-rows: auto;
   position: relative;
   padding-bottom: 1rem;
-  left: 2vw;
+  left: 3vw;
 }
 
 .slider-container {
   position: relative;
-  max-width: 85vw;
+  max-width: 88vw;
   height: 35vh;
   margin: 0 auto;
 }
 
 .movie-poster {
   height: 35vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
 }
 
 .movie-poster img {
@@ -28,13 +24,12 @@
   object-fit: cover; /* Maintain aspect ratio and fit within the container */
 }
 .movie-cards h5 {
-  color: rgba(219, 217, 217, 0.911);
+  color: rgb(219, 217, 217);
   font-size: large;
   font-weight: bolder;
   font-family: Arial, sans-serif;
   margin: 1rem;
 }
-.genre-text {
-  position: relative;
-  left: 5vw;
+.genre-text h5 {
+  padding-left: 5rem;
 }
