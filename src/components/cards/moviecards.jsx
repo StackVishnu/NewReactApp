@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./moviecards.css";
 import Scrollable from "./scrollable.jsx";
 
+
 const MovieCards = () => {
   return (
     <div className="movie-cards" id="movie-cards">
@@ -10,12 +11,6 @@ const MovieCards = () => {
       </div>
 
       <div className="movie-grid">
-        <Scrollable></Scrollable>
-
-        <div className="genre-text">
-          <h5>Latest Uploads</h5>
-        </div>
-
         <Scrollable></Scrollable>
       </div>
     </div>

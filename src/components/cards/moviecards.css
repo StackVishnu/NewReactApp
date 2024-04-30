@@ -8,22 +8,22 @@
 
 .slider-container {
   position: relative;
-  max-width: 88vw;
-  height: 35vh;
+  max-width: 35vw;
+  height: 50vh;
   left: 5vw;
   margin: 0 0 5rem 0;
 }
 
-.movie-poster {
-  height: 35vh;
-}
-
 .movie-poster img {
   border-radius: 0.5rem;
-  max-width: 100%; /* Ensure images scale down proportionally */
-  max-height: 100%;
-  object-fit: cover; /* Maintain aspect ratio and fit within the container */
+  width: 100%;
+  /* Ensure images scale down proportionally */
+  height: 100%;
+  object-fit: contain;
+
+  /* Maintain aspect ratio and fit within the container */
 }
+
 .movie-cards h5 {
   color: rgb(219, 217, 217);
   font-size: large;
@@ -31,18 +31,20 @@
   font-family: Arial, sans-serif;
   margin: 1rem;
 }
+
 .genre-text h5 {
   padding-left: 5rem;
 }
+
 .movie-poster {
   position: relative;
-  overflow: hidden;
+  height: fit-content;
   transition: transform 0.5s ease-in-out;
+  border-radius: 5rem;
 }
 
 .movie-poster:hover {
   transform: scale(1.6);
-
   z-index: 5;
 }
 
@@ -50,10 +52,88 @@
   opacity: 1;
 }
 
-.expanded {
-  display: grid;
-  grid-template-rows: 1fr 2fr 1fr;
+.slider-main {
+  display: flex;
+  position: relative;
+  width: 90vw;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+  /* Optional: Add smooth scrolling behavior */
+  scroll-snap-type: x mandatory;
 }
-.slick-list {
-  overflow-y: visible !important;
+
+.expanded {
+  opacity: 0;
+}
+
+.pagination-button1 {
+  width: 12%;
+  position: relative;
+  z-index: 6;
+  bottom: 31vh;
+  opacity: 0;
+}
+.pagination-button2 {
+  width: 12%;
+  position: relative;
+  left: 88vw;
+  z-index: 6;
+  bottom: 57vh;
+  opacity: 0;
+}
+.pagination-button1:hover,
+.pagination-button2:hover {
+  opacity: 1;
+}
+
+.border-button {
+  background: #00000077;
+  padding: 4rem 0.5rem;
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
+}
+.extended {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 0.5rem;
+  transition: all 300ms ease-in;
+}
+.extended img {
+  height: 50%;
+  object-fit: fill;
+}
+.extended-buttons {
+  display: flex;
+  justify-content: space-between; /* Buttons distributed horizontally */
+}
+.extended-button1 {
+  background-color: rgba(255, 255, 255, 0.904);
+  border: none;
+  border-radius: 0.2rem;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  font-size: x-small;
+  padding: 0.5rem 1.2rem;
+}
+.extended-button2 {
+  background-color: rgba(163, 163, 163, 0.623);
+  border: none;
+  border-radius: 0.2rem;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+
+  margin-right: 2px;
+}
+.extended-description {
+  color: #ffffff;
+}
+.extended:hover {
+  opacity: 1;
 }

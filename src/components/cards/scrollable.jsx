@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
-import Slider from "react-slick";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import "./moviecards.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const Scrollable = () => {
   const [movieArr, setMovieArr] = useState([]);
+  const [currentPage, setCurrentPage] = useState(0);
+  const itemsPerPage = 8; // Adjust this value to show more or fewer items per page
 
   useEffect(() => {
-    fetch("https://api.sampleapis.com/movies/mystery")
+    fetch("https://api.sampleapis.com/movies/family")
       .then((response) => response.json())
       .then((data) => {
         setMovieArr(data);
@@ -17,63 +20,64 @@ const Scrollable = () => {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
-  var settings = {
-    className: "",
-    dots: false,
-    infinite: false,
-    speed: 600,
-    slidesToShow: 7,
-    slidesToScroll: 4,
-    initialSlide: 0,
-        adaptiveHeight: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+  const handlePrevPage = () => {
+    setCurrentPage(currentPage - 1);
   };
 
+  const handleNextPage = () => {
+    setCurrentPage(currentPage + 1);
+  };
 
+  const indexOfLastItem = (currentPage + 1) * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = movieArr.slice(indexOfFirstItem, indexOfLastItem);
 
   return (
+    <>
     <div className="slider-container">
-      <Slider {...settings}>
-        {movieArr.map((d, index) => (
+      <div className="slider-main">
+        {currentItems.map((d, index) => (
           <div key={d.id} className="movie-poster">
             <img src={d.posterURL} alt="movie poster" />
-            <div className="hover-content">
-              <div className="expanded">
-              <img src={d.posterURL} alt="movie poster" />
-              <button>button</button>
-              <p>{d.description}</p>
-              </div>
+            <div className="extended">
+                <img src={d.posterURL} alt="movie-poster" />
+                <div className="extended-buttons">
+                <button className="extended-button1"><FontAwesomeIcon
+              icon={faPlay}
+              style={{ color: "black", marginRight:'0.1rem'} }
+            />Watch Now</button>
+                <button className="extended-button2">+</button>
+                </div>
+                <div className="extended-description">
+                  <h4>Description</h4>
+                </div>
+                
             </div>
           </div>
         ))}
-      </Slider>
+      </div>
+
+    <div className="pagination-button1 ">
+      <button className="border-button" onClick={handlePrevPage} disabled={currentPage === 0}>
+      <FontAwesomeIcon icon={faChevronLeft} /> 
+      </button>
     </div>
+
+    <div className="pagination-button2  ">
+      <button
+        className="border-button"
+        onClick={handleNextPage}
+        disabled={indexOfLastItem >= movieArr.length}
+      >
+        <FontAwesomeIcon icon={faChevronRight} /> 
+      </button>
+    </div>
+  </div>
+  </>         
+      
+    
   );
 };
 
 export default Scrollable;
+
