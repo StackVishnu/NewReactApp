@@ -7,6 +7,8 @@ import tv from "../../assets/tv_icon.svg";
 import movie from "../../assets/movie_icon.svg";
 import sports from "../../assets/sport_icon.svg";
 import category from "../../assets/category_icon.svg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 function NavBar() {
   return (

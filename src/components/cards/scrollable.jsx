@@ -5,20 +5,20 @@ import "./moviecards.css";
 
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-const Scrollable = () => {
+const Scrollable = ({apiUrl}) => {
   const [movieArr, setMovieArr] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 8; // Adjust this value to show more or fewer items per page
 
   useEffect(() => {
-    fetch("https://api.sampleapis.com/movies/family")
+    fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
         setMovieArr(data);
         console.log(data);
       })
       .catch((error) => console.error("Error fetching data:", error));
-  }, []);
+  }, [apiUrl]);
 
   const handlePrevPage = () => {
     setCurrentPage(currentPage - 1);
@@ -49,7 +49,7 @@ const Scrollable = () => {
                 <button className="extended-button2">+</button>
                 </div>
                 <div className="extended-description">
-                  <h4>Description</h4>
+                  <h4>{d.title}</h4>
                 </div>
                 
             </div>

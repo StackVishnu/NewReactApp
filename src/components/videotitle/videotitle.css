@@ -63,20 +63,27 @@ p {
   line-height: 1.5rem; /* Adjust line spacing */
 }
 .subscribe-button {
+  display: flex;
+  width: 80vw;
   top: 1vh;
 }
-
+.subscribe-button > div {
+  position: relative;
+  margin-left: auto;
+  align-self: center;
+}
 .subscribe-button .button-5 {
   background-color: rgba(255, 255, 255, 0.226);
   border-radius: 0.5rem;
   color: #ffffff;
   border: none;
-  margin-left: 1vw;
+
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   font-size: larger;
-  padding: 2.4vh 1.3vw;
+  padding: 2.2vh 1.4vw;
+  margin: 1rem 1rem;
 }
 
 .subscribe-button .button-4 {
@@ -88,7 +95,8 @@ p {
   font-size: 1rem;
   font-weight: 600;
   font-size: large;
-  padding: 2.5vh 7vw;
+  padding: 2vh 7vw;
+  margin: 1rem 0 1rem 0;
 }
 
 .button-4:hover,
@@ -104,4 +112,15 @@ p {
   border-radius: 50%;
   display: inline-block;
   position: relative;
+}
+.age-restriction {
+  background-color: rgba(255, 255, 255, 0.226);
+  border: none;
+  border-radius: 0.3rem;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-weight: 600;
+  font-size: medium;
+  padding: 0.5vh 0.6vw;
 }
