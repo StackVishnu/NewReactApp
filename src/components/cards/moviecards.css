@@ -16,7 +16,8 @@
   width: 100%;
   /* Ensure images scale down proportionally */
   height: 100%;
-  object-fit: fill;
+  max-height: 35vh;
+  object-fit: contain;
 
   /* Maintain aspect ratio and fit within the container */
 }
@@ -54,6 +55,7 @@
   display: flex;
   position: relative;
   width: 90vw;
+
   gap: 0.5rem;
   flex-wrap: nowrap;
 }

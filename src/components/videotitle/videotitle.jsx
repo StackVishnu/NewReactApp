@@ -1,8 +1,9 @@
-import "./videotitle.css";
-import titleCard from "../../assets/avengers.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import titleCard from "../../assets/avengers.png";
+import MultipleItems from "./titlescroll";
+import "./videotitle.css";
 
 function VideoTitle() {
   return (
@@ -35,7 +36,7 @@ function VideoTitle() {
             <FontAwesomeIcon icon={faPlus} style={{ color: "#ffffff" }} />
           </button>
           <div>
-          <div >hiiii</div>
+          <div ><MultipleItems></MultipleItems></div>
           </div>
         </div>
       </div>
