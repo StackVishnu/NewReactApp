@@ -14,12 +14,10 @@
 .movie-poster img {
   border-radius: 0.5rem;
   width: 100%;
-  /* Ensure images scale down proportionally */
+
   height: 100%;
   max-height: 35vh;
   object-fit: contain;
-
-  /* Maintain aspect ratio and fit within the container */
 }
 
 .movie-cards h5 {
@@ -86,7 +84,6 @@
 
 .border-button {
   background: #00000011;
-  /* background-color: #00000015; */
   padding: 4rem 0.5rem;
   border: none;
   font-size: large;
@@ -106,8 +103,9 @@
   transition: all 300ms ease-in;
 }
 .extended img {
-  height: 50%;
+  height: 30%;
   object-fit: cover;
+  object-position: center;
 }
 .extended-buttons {
   display: flex;

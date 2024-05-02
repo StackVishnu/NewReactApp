@@ -1,10 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
-import first from "../../assets/account_circle_FILL0_wght300_GRAD0_opsz24.svg";
+import { faCircleUser } from '@fortawesome/free-regular-svg-icons';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faHouse } from '@fortawesome/free-solid-svg-icons';
+import { faTv} from '@fortawesome/free-solid-svg-icons';
+import { faVideo} from '@fortawesome/free-solid-svg-icons';
+import { faBaseball} from '@fortawesome/free-solid-svg-icons';
+import { faShapes} from '@fortawesome/free-solid-svg-icons';
 import logo from "../../assets/logo_icon.svg";
-import search from "../../assets/search_icon.svg";
-import home from "../../assets/home_icon.svg";
-import tv from "../../assets/tv_icon.svg";
 import movie from "../../assets/movie_icon.svg";
 import sports from "../../assets/sport_icon.svg";
 import category from "../../assets/category_icon.svg";
@@ -22,43 +24,43 @@ function NavBar() {
           <ul>
             <li>
               <div className="icon-container">
-                <img src={first} className="navbar-icons" alt="icon" />
+              <FontAwesomeIcon icon={faCircleUser} className='navbar-icons' />
                 <span className="link-text">My Space</span>
               </div>
             </li>
             <li>
               <div className="icon-container">
-                <img src={search} className="navbar-icons" alt="icon" />
+              <FontAwesomeIcon icon={faMagnifyingGlass} className='navbar-icons' />
                 <span className="link-text">Search</span>
               </div>
             </li>
             <li>
               <div className="icon-container">
-                <img src={home} className="navbar-icons" alt="icon" />
+              <FontAwesomeIcon icon={faHouse} className='navbar-icons' />
                 <span className="link-text">Home</span>
               </div>
             </li>
             <li>
               <div className="icon-container">
-                <img src={tv} className="navbar-icons" alt="icon" />
+              <FontAwesomeIcon icon={faTv} className='navbar-icons' />
                 <span className="link-text">TV</span>
               </div>
             </li>
             <li>
               <div className="icon-container">
-                <img src={movie} className="navbar-icons" alt="icon" />
+              <FontAwesomeIcon icon={faVideo} className='navbar-icons' />
                 <span className="link-text">Movie</span>
               </div>
             </li>
             <li>
               <div className="icon-container">
-                <img src={sports} className="navbar-icons" alt="icon" />
+              <FontAwesomeIcon icon={faBaseball} className='navbar-icons' />
                 <span className="link-text">Sports</span>
               </div>
             </li>
             <li>
               <div className="icon-container">
-                <img src={category} className="navbar-icons" alt="icon" />
+              <FontAwesomeIcon icon={faShapes} className='navbar-icons' />
                 <span className="link-text">Category</span>
               </div>
             </li>
