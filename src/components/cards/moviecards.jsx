@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./moviecards.css";
 import Scrollable from "./scrollable.jsx";
 
-const apiUrl = "https://api.sampleapis.com/movies/mystery";
+
 const MovieCards = () => {
   return (
     <div className="movie-cards" id="movie-cards">

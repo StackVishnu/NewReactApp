@@ -2,7 +2,7 @@
   display: grid;
   grid-template-rows: auto;
   z-index: 0;
-  grid-template-columns: auto; /* One column */
+  grid-template-columns: auto;
   grid-auto-rows: auto;
   width: 100%;
 }
@@ -13,7 +13,6 @@
   top: 0;
 }
 .video-player video {
-  position: relative;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -21,7 +20,6 @@
 
 .card-row {
   width: 100%;
-  position: relative;
   background: linear-gradient(
     to top,
 

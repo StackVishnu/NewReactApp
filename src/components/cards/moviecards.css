@@ -56,9 +56,6 @@
   width: 90vw;
   gap: 0.5rem;
   flex-wrap: nowrap;
-  scroll-behavior: smooth;
-  /* Optional: Add smooth scrolling behavior */
-  scroll-snap-type: x mandatory;
 }
 
 .expanded {
