@@ -1,12 +1,13 @@
-import React from "react";
+import React, {  useState } from "react";
 import Slider from "react-slick";
 import img2 from '../../assets/civil_war.jpeg'
 import img3 from '../../assets/infinity.jpeg'
 import img4 from '../../assets/endgame.jpeg'
-import './videotitle.css'
+import avngrs2 from '../../assets/age_of_ultron.png'
+import titleCard from "../../assets/avengers.png";
 import './titlescroll.css'
 
-function MultipleItems() {
+function MultipleItems({setSelectedImage}) {
   const settings = {
     dots: false,
     infinite: false,
@@ -15,14 +16,34 @@ function MultipleItems() {
     slidesToScroll: 3,
     variableWidth: true
   };
+
+
+  const handleImageClick = (imageData) => {
+    setSelectedImage(imageData);
+  };
+  const defaultData = {
+    titleImage: titleCard,
+    movieSpecs: '2012 • 2h24m • 4 languages',
+    descriptionText: "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
+    genres: 'Superhero | Action | Dark Humour',
+    ageRestriction: 'U/A 16+',
+  };
+  const imageData = {
+    titleImage: avngrs2,
+    movieSpecs: '2016 • 2h24m • 4 languages',
+    descriptionText: "Tony Stark builds an artificial intelligence system named Ultron with the help of Bruce Banner. When the sentient Ultron makes plans to wipe out the human race, the Avengers set out to stop him.",
+    genres: 'Superhero | Action | Dark Humour | Sci-Fi',
+    ageRestriction: 'U/A 16+',
+  };
   return (
+
     <div className="slider-container">
       <Slider {...settings}>
         <div className="title-scroll-container" >
-          <img src="https://image.tmdb.org/t/p/original/yHdPTs239Cqce1s6y9figbeolR1.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/original/yHdPTs239Cqce1s6y9figbeolR1.jpg" alt="" onClick={() => handleImageClick(defaultData)}/>
         </div>
         <div className="title-scroll-container">
-          <img src="https://www.vintagemovieposters.co.uk/wp-content/uploads/2021/03/IMG_1741.jpeg" alt="" />
+          <img src="https://www.vintagemovieposters.co.uk/wp-content/uploads/2021/03/IMG_1741.jpeg" alt="" onClick={() => handleImageClick(imageData)}/>
         </div>
         <div className="title-scroll-container" >
           <img src={img2} alt="civilwar" />

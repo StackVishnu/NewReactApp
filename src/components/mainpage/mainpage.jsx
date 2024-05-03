@@ -1,9 +1,12 @@
+import React, { useState } from "react";
 import video from "../../assets/avengers.webm";
 import VideoTitle from "../videotitle/videotitle";
-import "./mainpage.css";
 import MovieCards from "../cards/moviecards";
+import "./mainpage.css";
 
 function MainPage() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   return (
     <>
       <div className="scroll-container">
@@ -11,10 +14,10 @@ function MainPage() {
           <video src={video} autoPlay loop muted type="video/mp4"></video>
         </div>
         <div className="video-title">
-          <VideoTitle />
+          <VideoTitle selectedImage={selectedImage} setSelectedImage={setSelectedImage} />
         </div>
         <div className="card-row">
-          <MovieCards />
+          <MovieCards setSelectedImage={setSelectedImage} />
         </div>
       </div>
     </>
