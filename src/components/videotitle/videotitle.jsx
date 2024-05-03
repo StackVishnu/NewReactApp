@@ -20,6 +20,7 @@ function VideoTitle({ selectedImage, setSelectedImage }) {
     const { titleImage, movieSpecs, descriptionText, genres, ageRestriction } = selectedImage || defaultData;
 
     return (
+
       <>
         <div className="title">
           <img src={titleImage} alt="image" className="title-card" />

@@ -13,7 +13,7 @@
   top: 0;
 }
 .video-player video {
-  height: 90%;
+  height: 100%;
   width: 100%;
   object-fit: cover;
 }
@@ -22,9 +22,12 @@
   width: 100%;
   background: linear-gradient(
     to top,
-
+    rgba(0, 0, 0, 1) 0%,
     rgba(0, 0, 0, 1) 50%,
-    rgba(0, 0, 0, 0.8) 70%,
+    rgba(0, 0, 0, 0.6) 75%,
+    rgba(0, 0, 0, 0.3) 80%,
+    rgba(0, 0, 0, 0.2) 90%,
     rgba(0, 0, 0, 0) 100%
   );
+  z-index: 4;
 }

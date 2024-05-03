@@ -2,6 +2,7 @@
   top: 8vh;
   left: 18vh;
   position: absolute;
+  transition: all 500ms ease;
 }
 .title h4 {
   position: relative;
