@@ -8,7 +8,7 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 const Scrollable = ({apiUrl}) => {
   const [movieArr, setMovieArr] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 8; // Adjust this value to show more or fewer items per page
+  const itemsPerPage = 8; 
 
   useEffect(() => {
     fetch(apiUrl)
