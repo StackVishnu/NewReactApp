@@ -18,9 +18,9 @@ function MultipleItems({setSelectedImage}) {
   };
 
 
-  const handleImageClick = (imageData) => {
-    setSelectedImage(imageData);
-  };
+ 
+    
+
   const defaultData = {
     titleImage: titleCard,
     movieSpecs: '2012 • 2h24m • 4 languages',
@@ -40,10 +40,10 @@ function MultipleItems({setSelectedImage}) {
     <div className="slider-container">
       <Slider {...settings}>
         <div className="title-scroll-container" >
-          <img src="https://image.tmdb.org/t/p/original/yHdPTs239Cqce1s6y9figbeolR1.jpg" alt="" onClick={() => handleImageClick(defaultData)}/>
+          <img src="https://image.tmdb.org/t/p/original/yHdPTs239Cqce1s6y9figbeolR1.jpg" alt="" onClick={() => setSelectedImage(defaultData)}/>
         </div>
         <div className="title-scroll-container">
-          <img src="https://www.vintagemovieposters.co.uk/wp-content/uploads/2021/03/IMG_1741.jpeg" alt="" onClick={() => handleImageClick(imageData)}/>
+          <img src="https://www.vintagemovieposters.co.uk/wp-content/uploads/2021/03/IMG_1741.jpeg" alt="" onClick={() => setSelectedImage(imageData)}/>
         </div>
         <div className="title-scroll-container" >
           <img src={img2} alt="civilwar" />

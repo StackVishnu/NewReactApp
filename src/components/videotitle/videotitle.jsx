@@ -1,4 +1,4 @@
-
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
@@ -7,22 +7,37 @@ import MultipleItems from "./titlescroll";
 import "./videotitle.css";
 
 function VideoTitle({ selectedImage, setSelectedImage }) {
-  
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  useEffect(() => {
+    setIsAnimating(true); 
+    const timeout = setTimeout(() => {
+      setIsAnimating(false);
+    }, 400);
+    return () => clearTimeout(timeout);
+  }, [selectedImage]);
+
   const renderVideoTitle = () => {
     const defaultData = {
       titleImage: titleCard,
-      movieSpecs: '2012 • 2h24m • 4 languages',
-      descriptionText: "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
-      genres: 'Superhero | Action | Dark Humour',
-      ageRestriction: 'U/A 16+',
+      movieSpecs: "2012 • 2h24m • 4 languages",
+      descriptionText:
+        "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
+      genres: "Superhero | Action | Dark Humour",
+      ageRestriction: "U/A 16+"
     };
 
-    const { titleImage, movieSpecs, descriptionText, genres, ageRestriction } = selectedImage || defaultData;
+    const {
+      titleImage,
+      movieSpecs,
+      descriptionText,
+      genres,
+      ageRestriction
+    } = selectedImage || defaultData;
 
     return (
-
       <>
-        <div className="title">
+        <div className={`title ${isAnimating ? "fade" : ""}`}>
           <img src={titleImage} alt="image" className="title-card" />
           <h4 className="movie-specs">
             {movieSpecs}
@@ -30,7 +45,7 @@ function VideoTitle({ selectedImage, setSelectedImage }) {
             <button className="age-restriction">{ageRestriction}</button>
           </h4>
         </div>
-        <div className="description">
+        <div className={`description ${isAnimating ? "fade" : ""}`}>
           <div className="description-text">
             <p>{descriptionText}</p>
             <h4>{genres}</h4>
@@ -48,7 +63,7 @@ function VideoTitle({ selectedImage, setSelectedImage }) {
             </button>
             <div>
               <div>
-              <MultipleItems setSelectedImage={setSelectedImage} />
+                <MultipleItems setSelectedImage={setSelectedImage} />
               </div>
             </div>
           </div>
@@ -57,7 +72,7 @@ function VideoTitle({ selectedImage, setSelectedImage }) {
     );
   };
 
-  return <>{renderVideoTitle()}</>;
+  return <div className="video-title">{renderVideoTitle()}</div>;
 }
 
 export default VideoTitle;

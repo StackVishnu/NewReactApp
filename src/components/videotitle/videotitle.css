@@ -2,13 +2,22 @@
   top: 8vh;
   left: 18vh;
   position: absolute;
-  transition: all 500ms ease;
 }
+
 .title h4 {
   position: relative;
   top: 2vh;
 }
+.fade {
+  opacity: 0; /* Initially invisible */
+  transition: opacity 0.5s ease; /* Transition opacity over 0.5 seconds with ease */
+}
 
+/* Define transition effect for the title and description */
+.title,
+.description {
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Transition transform and opacity over 0.5 seconds with ease */
+}
 .description {
   top: 40vh;
   left: 18vh;
@@ -68,6 +77,9 @@ p {
   position: relative;
   width: 80vw;
   top: 1vh;
+}
+.subscribe-button button {
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 .subscribe-button > div {
   position: relative;
