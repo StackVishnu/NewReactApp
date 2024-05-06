@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./moviecards.css";
 import Scrollable from "./scrollable.jsx";
+import SpclCards from "./specialcards.jsx"; 
 
 const GenreMovies = ({ genre, apiUrl }) => {
   return (
@@ -20,10 +21,9 @@ const MovieCards = ({ isScrolled }) => {
     { name: "Mystery", apiUrl: "https://api.sampleapis.com/movies/mystery" },
     { name: "Family", apiUrl: "https://api.sampleapis.com/movies/family" },
     { name: "Comedy", apiUrl: "https://api.sampleapis.com/movies/comedy" },
-
   ]);
 
-  const bottomBoundaryRef = useRef(null);
+  const  bottomBoundaryRef= useRef(null);
   const maxValue = 6;
   const loadMoreGenres = () => {
     if (genres.length < maxValue) {
@@ -35,7 +35,6 @@ const MovieCards = ({ isScrolled }) => {
           { name: "Western", apiUrl: "https://api.sampleapis.com/movies/western" },
           { name: "Animation", apiUrl: "https://api.sampleapis.com/movies/animation" },
           { name: "Classic", apiUrl: "https://api.sampleapis.com/movies/classic" }
-          
         ]);
       }, 1000);
     }
@@ -64,6 +63,10 @@ const MovieCards = ({ isScrolled }) => {
       {genres.map((genre, index) => (
         <GenreMovies key={index} genre={genre.name} apiUrl={genre.apiUrl} />
       ))}
+      <div className="movie-grid2">
+      {genres.length > 3 && <SpclCards />} 
+      </div>
+
       <div ref={bottomBoundaryRef}></div>
     </div>
   );
