@@ -15,7 +15,7 @@ const GenreMovies = ({ genre, apiUrl }) => {
   );
 };
 
-const MovieCards = () => {
+const MovieCards = ({ isScrolled }) => {
   const [genres, setGenres] = useState([
     { name: "Mystery", apiUrl: "https://api.sampleapis.com/movies/mystery" },
     { name: "Family", apiUrl: "https://api.sampleapis.com/movies/family" },
@@ -60,7 +60,7 @@ const MovieCards = () => {
   }, [genres]);
 
   return (
-    <div className="movie-cards" id="movie-cards">
+    <div className={`movie-cards ${isScrolled ? "scrolled" : ""}`}>
       {genres.map((genre, index) => (
         <GenreMovies key={index} genre={genre.name} apiUrl={genre.apiUrl} />
       ))}

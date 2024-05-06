@@ -12,7 +12,7 @@ function MultipleItems({setSelectedImage}) {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 5,
     slidesToScroll: 3,
     variableWidth: true
   };

@@ -12,13 +12,13 @@
   top: 0;
 }
 .video-player video {
-  height: 72%;
+  height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
 .card-row {
-  margin-top: -10rem;
+  margin-top: -11rem;
 
   width: 100%;
   background: linear-gradient(
@@ -26,10 +26,22 @@
     rgba(0, 0, 0, 1) 0%,
     rgba(0, 0, 0, 1) 50%,
     rgba(0, 0, 0, 0.7) 90%,
+    rgba(0, 0, 0, 0.3) 99%,
     rgba(0, 0, 0, 0) 100%
   );
   z-index: 4;
 }
 .card-row .scrolled {
-  background: #000 !important;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0.7) 90%,
+    rgba(0, 0, 0, 0.9) 95%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
+/* 
+.main-video .scrolled {
+  height: 10% !important;
+} */

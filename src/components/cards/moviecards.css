@@ -42,7 +42,7 @@
 .movie-poster:hover {
   transition-delay: 0.5s;
   transform: scale(1.6);
-  z-index: 5;
+  z-index: 12;
 }
 
 .movie-poster:hover .hover-content {
@@ -83,7 +83,7 @@
 }
 
 .border-button {
-  background: #00000011;
+  background: #00000049;
   padding: 4rem 0.5rem;
   border: none;
   font-size: large;
@@ -93,6 +93,7 @@
 }
 .extended {
   opacity: 0;
+  z-index: 12;
   position: absolute;
   top: 0;
   right: 0;
@@ -134,6 +135,7 @@
   text-align: center;
 }
 .extended:hover {
+  z-index: 12;
   opacity: 1;
   transition-delay: 0.5s;
 }

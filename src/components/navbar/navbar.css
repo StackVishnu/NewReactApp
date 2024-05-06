@@ -6,7 +6,7 @@
   width: 4vw;
   height: 100vh;
   padding: 1rem;
-  z-index: 11;
+  z-index: 9;
   background: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.9) 0%,
