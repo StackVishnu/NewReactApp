@@ -24,7 +24,8 @@ function VideoTitle({ selectedImage, setSelectedImage }) {
       descriptionText:
         "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
       genres: "Superhero | Action | Dark Humour",
-      ageRestriction: "U/A 16+"
+      ageRestriction: "U/A 16+",
+      posterImg : "../../assets/avengers_poster.webp"
     };
 
     const {
@@ -32,7 +33,7 @@ function VideoTitle({ selectedImage, setSelectedImage }) {
       movieSpecs,
       descriptionText,
       genres,
-      ageRestriction
+      ageRestriction,
     } = selectedImage || defaultData;
 
     return (

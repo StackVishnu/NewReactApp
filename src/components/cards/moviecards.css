@@ -40,7 +40,7 @@
 }
 
 .movie-poster:hover {
-  transition-delay: 0.5s;
+  transition-delay: 1s;
   transform: scale(1.6);
   z-index: 12;
 }
@@ -68,6 +68,7 @@
   z-index: 6;
   bottom: 31vh;
   opacity: 0;
+  z-index: 15;
 }
 .pagination-button2 {
   width: 12%;
@@ -83,7 +84,7 @@
 }
 
 .border-button {
-  background: #00000049;
+  background: #00000075;
   padding: 4rem 0.5rem;
   border: none;
   font-size: large;
@@ -137,8 +138,12 @@
 .extended:hover {
   z-index: 12;
   opacity: 1;
-  transition-delay: 0.5s;
+  transition-delay: 1s;
 }
 .movie-grid {
   display: grid;
+}
+.langcards h5 {
+  position: relative;
+  left: 7vw;
 }

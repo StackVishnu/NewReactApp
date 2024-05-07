@@ -41,7 +41,10 @@
     rgba(0, 0, 0, 0) 100%
   );
 }
-/* 
-.main-video .scrolled {
-  height: 10% !important;
-} */
+.title-poster {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  object-fit: contain;
+}

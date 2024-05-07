@@ -11,4 +11,9 @@
   height: min-content;
   transition: transform 0.5s ease-in-out;
   border-radius: 5rem;
+  transition: transform 200ms ease;
+}
+.lang-poster:hover {
+  transform: scale(1.2);
+  z-index: 20;
 }

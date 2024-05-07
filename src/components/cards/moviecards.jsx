@@ -27,16 +27,16 @@ const MovieCards = ({ isScrolled }) => {
   const [specialCardsRendered, setSpecialCardsRendered] = useState(false);
 
   const bottomBoundaryRef = useRef(null);
-  const maxValue = 6;
+  const maxValue = 4;
   const loadMoreGenres = () => {
     if (genres.length < maxValue) {
       setTimeout(() => {
         setGenres((prevGenres) => [
           ...prevGenres,
           { name: "Drama", apiUrl: "https://api.sampleapis.com/movies/drama" },
-          { name: "Western", apiUrl: "https://api.sampleapis.com/movies/western" },
-          { name: "Animation", apiUrl: "https://api.sampleapis.com/movies/animation" },
-          { name: "Classic", apiUrl: "https://api.sampleapis.com/movies/classic" }
+          // { name: "Western", apiUrl: "https://api.sampleapis.com/movies/western" },
+          // { name: "Animation", apiUrl: "https://api.sampleapis.com/movies/animation" },
+          // { name: "Classic", apiUrl: "https://api.sampleapis.com/movies/classic" }
         ]);
       }, 1000);
     }
@@ -73,9 +73,13 @@ const MovieCards = ({ isScrolled }) => {
       ))}
       <div className="movie-grid2">
         {specialCardsRendered && <SpclCards />}
-        {specialCardsRendered && <LangScroll />} 
+        {specialCardsRendered && <div className="langcards">
+          <h5 className="lang-text">Popular Languages</h5>
+          <LangScroll /> </div>} 
       </div>
-
+      <div className={`movie-cards ${isScrolled ? "scrolled" : ""}`}>
+      <GenreMovies key={109} genre="Animation" apiUrl="https://api.sampleapis.com/movies/animation" />
+      </div>
       <div ref={bottomBoundaryRef}></div>
     </div>
   );

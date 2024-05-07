@@ -7,9 +7,7 @@ import { faVideo} from '@fortawesome/free-solid-svg-icons';
 import { faBaseball} from '@fortawesome/free-solid-svg-icons';
 import { faShapes} from '@fortawesome/free-solid-svg-icons';
 import logo from "../../assets/logo_icon.svg";
-import movie from "../../assets/movie_icon.svg";
-import sports from "../../assets/sport_icon.svg";
-import category from "../../assets/category_icon.svg";
+
 import "./navbar.css";
 
 function NavBar() {
@@ -18,7 +16,7 @@ function NavBar() {
       <nav className="navbar">
         <div className="logo">
           <img src={logo} className="disney" alt="" />
-          <button className="subscribe-logo">subscribe </button>
+          <button className="subscribe-logo">subscribe <code>&gt;</code></button>
         </div>
         <div className="navbar-icon-container">
           <ul>

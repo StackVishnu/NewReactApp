@@ -5,6 +5,9 @@ import img3 from '../../assets/infinity.jpeg'
 import img4 from '../../assets/endgame.jpeg'
 import avngrs2 from '../../assets/age_of_ultron.png'
 import titleCard from "../../assets/avengers.png";
+import poster1 from "../../assets/avengers_poster.webp"
+import poster2 from "../../assets/ultron_poster.webp"
+// import vid1 from "../../assets/avengers.webm"
 import './titlescroll.css'
 
 function MultipleItems({setSelectedImage}) {
@@ -27,6 +30,7 @@ function MultipleItems({setSelectedImage}) {
     descriptionText: "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
     genres: 'Superhero | Action | Dark Humour',
     ageRestriction: 'U/A 16+',
+    posterImg: poster1,
   };
   const imageData = {
     titleImage: avngrs2,
@@ -34,6 +38,7 @@ function MultipleItems({setSelectedImage}) {
     descriptionText: "Tony Stark builds an artificial intelligence system named Ultron with the help of Bruce Banner. When the sentient Ultron makes plans to wipe out the human race, the Avengers set out to stop him.",
     genres: 'Superhero | Action | Dark Humour | Sci-Fi',
     ageRestriction: 'U/A 16+',
+    posterImg: poster2,
   };
   return (
 

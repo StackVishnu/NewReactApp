@@ -27,11 +27,14 @@
 }
 .logos {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   gap: 1rem;
   padding: 0.5rem;
+  overflow: hidden;
 }
 .colomn-4 {
-  justify-self: center;
+  text-align: center;
 }
 .connect-logo {
   height: 1.5rem;
@@ -40,4 +43,16 @@
 .logos img {
   height: 45%;
   width: 45%;
+}
+.logos2 {
+  display: flex;
+
+  height: 10vh;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  overflow: hidden;
+}
+.logos2 img {
+  height: 50%;
+  width: 50%;
 }

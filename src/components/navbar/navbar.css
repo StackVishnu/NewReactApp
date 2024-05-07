@@ -32,19 +32,18 @@
 }
 
 .subscribe-logo {
-  position: absolute;
+  position: fixed;
   top: 13vh;
-  left: 1.5vh;
+  left: 1vh;
   background: transparent;
   background-color: #e58d0922;
   color: rgb(247, 182, 138);
   border: none;
   opacity: 1;
-  font-size: small;
+  font-size: smaller;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 0.7rem;
   cursor: pointer;
-  padding: 0.2rem 0.6rem;
 }
 
 .navbar-icon-container {
@@ -105,7 +104,7 @@
 }
 
 .navbar:hover {
-  width: 30vw;
+  width: 15vw;
   background: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.9) 0%,

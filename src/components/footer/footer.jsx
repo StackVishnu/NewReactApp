@@ -28,9 +28,9 @@ function Footer(){
                 <FontAwesomeIcon icon={faFacebookF} style={{ color: "#fcfcfd" }} className="connect-logo" />
                 <FontAwesomeIcon icon={faXTwitter} style={{ color: "#fcfcfd" }} className="connect-logo"/>
                 </div>
-                <div className="logos">
+                <div className="logos2">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="" />
-                <img src="https://developer.apple.com/news/images/download-on-the-app-store-badge.png" alt="" />
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="" />
                 </div>
                 
             </div>
