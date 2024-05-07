@@ -1,9 +1,10 @@
 .footer-container {
   position: relative;
-  left: 7vw;
-  width: 93%;
+  padding-left: 7.1vw;
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  background: #000;
 }
 .footer-container h4,
 h5 {
