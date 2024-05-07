@@ -1,15 +1,5 @@
-.movie-grid2 {
-  left: 6vw;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-content: center;
-  align-content: center;
-  position: relative;
-  width: 90vw;
-  gap: 0.5rem;
-}
-
 .movie-poster2 {
+  width: 100%;
   border-radius: 0.5rem;
   position: relative;
   overflow: hidden;
@@ -26,7 +16,7 @@
   width: 100%;
   height: 100%;
 
-  object-fit: cover;
+  object-fit: contain;
   opacity: 1;
   z-index: 1; /* Adjust the z-index */
 }
@@ -54,6 +44,14 @@
 }
 
 .slider-main2 {
-  border-radius: 0.5rem;
-  padding: 1rem;
+  left: 7vw;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  width: 90vw;
+  height: 15vh;
+  gap: 0.5rem;
+  padding: 1rem 0 1rem 0;
 }
