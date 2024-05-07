@@ -14,12 +14,11 @@
 .video-player video {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .card-row {
   margin-top: -11rem;
-
   width: 100%;
   background: linear-gradient(
     to top,
@@ -43,8 +42,6 @@
 }
 .title-poster {
   position: absolute;
-  top: 0;
-  bottom: 0;
-
+  width: 100%;
   object-fit: contain;
 }

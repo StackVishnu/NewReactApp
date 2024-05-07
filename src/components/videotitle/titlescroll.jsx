@@ -7,6 +7,8 @@ import avngrs2 from '../../assets/age_of_ultron.png'
 import titleCard from "../../assets/avengers.png";
 import poster1 from "../../assets/avengers_poster.webp"
 import poster2 from "../../assets/ultron_poster.webp"
+import video1 from "../../assets/avengers.webm";
+import video2 from "../../assets/ultron.webm";
 // import vid1 from "../../assets/avengers.webm"
 import './titlescroll.css'
 
@@ -31,14 +33,16 @@ function MultipleItems({setSelectedImage}) {
     genres: 'Superhero | Action | Dark Humour',
     ageRestriction: 'U/A 16+',
     posterImg: poster1,
+    posterVid:video1
   };
   const imageData = {
     titleImage: avngrs2,
-    movieSpecs: '2016 • 2h24m • 4 languages',
+    movieSpecs: '2016 • 2h21m • 4 languages',
     descriptionText: "Tony Stark builds an artificial intelligence system named Ultron with the help of Bruce Banner. When the sentient Ultron makes plans to wipe out the human race, the Avengers set out to stop him.",
     genres: 'Superhero | Action | Dark Humour | Sci-Fi',
     ageRestriction: 'U/A 16+',
     posterImg: poster2,
+    posterVid: video2
   };
   return (
 

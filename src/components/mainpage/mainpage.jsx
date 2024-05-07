@@ -12,14 +12,11 @@ function MainPage() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > window.innerHeight / 2); 
+      setIsScrolled(scrollPosition > window.innerHeight / 2);
     };
-
-    const timer = setTimeout(()=>{
-      setShowImage(false)
-    },3000)
-
+  
     window.addEventListener("scroll", handleScroll);
+  
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -28,12 +25,13 @@ function MainPage() {
   return (
     <>
       <div className='scroll-container'>
-          <VideoPlayer showImage={showImage} isScrolled={isScrolled} selectedImage={selectedImage}/>
+     <VideoPlayer showImage={showImage} isScrolled={isScrolled} selectedImage={selectedImage} setSelectedImage={setSelectedImage}/>
+         
         <div className="video-title">
           <VideoTitle selectedImage={selectedImage} setSelectedImage={setSelectedImage} />
         </div>
         <div className={`card-row ${isScrolled ? "scrolled" : ""}`}>
-        <MovieCards setSelectedImage={setSelectedImage} isScrolled={isScrolled} />
+          <MovieCards setSelectedImage={setSelectedImage} isScrolled={isScrolled} />
         </div>
       </div>
       <Footer />
