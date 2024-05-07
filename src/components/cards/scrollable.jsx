@@ -3,7 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import "./moviecards.css";
 
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Scrollable = ({ apiUrl }) => {
   const [movieArr, setMovieArr] = useState([]);
@@ -36,6 +39,22 @@ const Scrollable = ({ apiUrl }) => {
   return (
     <>
       <div className="slider-container">
+        <div className="pagination-button ">
+          <button
+            className="border-button1"
+            onClick={handlePrevPage}
+            disabled={currentPage === 0}
+          >
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <button
+            className="border-button2"
+            onClick={handleNextPage}
+            disabled={indexOfLastItem >= movieArr.length}
+          >
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
+        </div>
         <div className="slider-main">
           {filteredItems.map((d, index) => (
             <div key={d.id} className="movie-poster">
@@ -60,7 +79,7 @@ const Scrollable = ({ apiUrl }) => {
           ))}
         </div>
 
-        <div className="pagination-button1 ">
+        {/* <div className="pagination-button ">
           <button
             className="border-button"
             onClick={handlePrevPage}
@@ -68,9 +87,6 @@ const Scrollable = ({ apiUrl }) => {
           >
             <FontAwesomeIcon icon={faChevronLeft} />
           </button>
-        </div>
-
-        <div className="pagination-button2  ">
           <button
             className="border-button"
             onClick={handleNextPage}
@@ -78,7 +94,17 @@ const Scrollable = ({ apiUrl }) => {
           >
             <FontAwesomeIcon icon={faChevronRight} />
           </button>
-        </div>
+        </div> */}
+
+        {/* <div className="pagination-button  ">
+          <button
+            className="border-button"
+            onClick={handleNextPage}
+            disabled={indexOfLastItem >= movieArr.length}
+          >
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
+        </div> */}
       </div>
     </>
   );

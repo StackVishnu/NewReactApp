@@ -56,18 +56,11 @@
   list-style: none;
 }
 
-.navbar-icon-container ul li {
-  display: grid;
-  grid-template-columns: auto auto;
-  align-items: center;
-  gap: 0.1rem;
-}
-
 .icon-container {
   display: flex;
-  align-items: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  padding: 0.2rem;
 }
 
 .icon-container:hover .link-text {

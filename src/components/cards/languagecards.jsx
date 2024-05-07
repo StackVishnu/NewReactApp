@@ -4,7 +4,10 @@ import languageData from "./langdata";
 import "./moviecards.css";
 import "./languagecards.css";
 
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 const LangScroll = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -30,6 +33,22 @@ const LangScroll = () => {
   return (
     <>
       <div className="slider-container">
+        <div className="pagination-button ">
+          <button
+            className="border-button"
+            onClick={handlePrevPage}
+            disabled={currentPage === 0}
+          >
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <button
+            className="border-button"
+            onClick={handleNextPage}
+            disabled={indexOfLastItem >= languageData.length}
+          >
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
+        </div>
         <div className="slider-main">
           {currentItems.map((d, index) => (
             <div key={index} className="lang-poster">
@@ -38,8 +57,12 @@ const LangScroll = () => {
           ))}
         </div>
 
-        <div className="pagination-button1">
-          <button className="border-button" onClick={handlePrevPage} disabled={currentPage === 0}>
+        {/* <div className="pagination-button1">
+          <button
+            className="border-button"
+            onClick={handlePrevPage}
+            disabled={currentPage === 0}
+          >
             <FontAwesomeIcon icon={faChevronLeft} />
           </button>
         </div>
@@ -52,7 +75,7 @@ const LangScroll = () => {
           >
             <FontAwesomeIcon icon={faChevronRight} />
           </button>
-        </div>
+        </div> */}
       </div>
     </>
   );

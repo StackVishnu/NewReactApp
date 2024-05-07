@@ -29,7 +29,7 @@
 }
 
 .genre-text h5 {
-  padding-left: 5rem;
+  padding-left: 6rem;
 }
 
 .movie-poster {
@@ -53,7 +53,7 @@
   display: flex;
   position: relative;
   width: 90vw;
-
+  left: 1vw;
   gap: 0.5rem;
   flex-wrap: nowrap;
 }
@@ -61,36 +61,38 @@
 .expanded {
   opacity: 0;
 }
-
-.pagination-button1 {
-  width: 12%;
-  position: relative;
-  z-index: 6;
-  bottom: 31vh;
-  opacity: 0;
-  z-index: 15;
-}
-.pagination-button2 {
-  width: 12%;
-  position: relative;
-  left: 88vw;
-  z-index: 6;
-  bottom: 59vh;
+.pagination-button {
+  position: absolute;
+  display: flex;
+  width: 90vw;
+  justify-content: space-between;
+  z-index: 12;
+  padding-right: 3%;
   opacity: 0;
 }
-.pagination-button1:hover,
-.pagination-button2:hover {
+.pagination-button:hover {
   opacity: 1;
 }
-
-.border-button {
-  background: #00000075;
-  padding: 4rem 0.5rem;
+.pagination-button button:disabled {
+  opacity: 0;
+}
+.pagination-button button {
+  background-color: rgba(0, 0, 0, 0.511);
   border: none;
-  font-size: large;
-  font-weight: 1000;
   color: #ffffff;
-  font-weight: 700;
+  font-size: larger;
+}
+.border-button1 {
+  position: relative;
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+.border-button2 {
+  position: relative;
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+.border-button:hover {
 }
 .extended {
   opacity: 0;
