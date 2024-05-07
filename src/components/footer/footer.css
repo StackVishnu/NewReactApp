@@ -5,7 +5,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.footer-container h4 {
+.footer-container h4,
+h5 {
   height: 1rem;
   color: aliceblue;
 }

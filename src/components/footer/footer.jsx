@@ -11,6 +11,8 @@ function Footer(){
                 <h4>Company</h4>
                 <p>About Us</p>
                 <p>Careers</p>
+                <h4>2023 STAR.All Rights Reserved.</h4>
+                <p>Terms of use  Privacy Policy  FAQ</p>
             </div>
             <div className="colomn-2">
                 <h4>View Website in</h4>
