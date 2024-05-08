@@ -4,6 +4,7 @@
   z-index: 0;
   grid-auto-rows: auto;
   width: 100%;
+  margin-top: 7vh;
 }
 
 .video-player video {

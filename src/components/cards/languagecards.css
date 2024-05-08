@@ -9,11 +9,45 @@
 .lang-poster {
   position: relative;
   height: min-content;
-  transition: transform 0.5s ease-in-out;
   border-radius: 5rem;
   transition: transform 200ms ease;
 }
 .lang-poster:hover {
-  transform: scale(1.2);
-  z-index: 20;
+  transition-delay: 1s;
+  transform: scale(1.5);
+  z-index: 12;
+}
+.pagination-button2 {
+  position: absolute;
+  display: flex;
+  width: 92vw;
+  justify-content: space-between;
+
+  opacity: 0;
+}
+.border-button3 {
+  position: relative;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-right: 2%;
+}
+.border-button4 {
+  position: relative;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 2%;
+}
+
+.pagination-button2:hover {
+  opacity: 1;
+  z-index: 13;
+}
+.pagination-button2 button:disabled {
+  opacity: 0;
+}
+.pagination-button2 button {
+  background-color: rgba(0, 0, 0, 0.658);
+  border: none;
+  color: #ffffff;
+  font-size: larger;
 }

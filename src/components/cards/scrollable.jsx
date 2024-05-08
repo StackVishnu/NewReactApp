@@ -32,9 +32,14 @@ const Scrollable = ({ apiUrl }) => {
 
   const indexOfLastItem = (currentPage + 1) * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = movieArr.slice(indexOfFirstItem, indexOfLastItem);
+  const filteredMovieArr = movieArr.filter((item) => {
+    const img = new Image();
+    img.src = item.posterURL;
+    return img.complete;
+  });
+  const currentItems = filteredMovieArr.slice(indexOfFirstItem, indexOfLastItem);
 
-  const filteredItems = currentItems.filter((item) => item.posterURL);
+
 
   return (
     <>
@@ -45,18 +50,18 @@ const Scrollable = ({ apiUrl }) => {
             onClick={handlePrevPage}
             disabled={currentPage === 0}
           >
-            <FontAwesomeIcon icon={faChevronLeft} />
+            <FontAwesomeIcon icon={faChevronLeft}  style={{ paddingRight: "1rem" }}/>
           </button>
           <button
             className="border-button2"
             onClick={handleNextPage}
             disabled={indexOfLastItem >= movieArr.length}
           >
-            <FontAwesomeIcon icon={faChevronRight} />
+            <FontAwesomeIcon icon={faChevronRight}   style={{ paddingLeft: "1rem" }}/>
           </button>
         </div>
         <div className="slider-main">
-          {filteredItems.map((d, index) => (
+          {currentItems.map((d, index) => (
             <div key={d.id} className="movie-poster">
               <img src={d.posterURL} alt="movie poster" />
               <div className="extended">

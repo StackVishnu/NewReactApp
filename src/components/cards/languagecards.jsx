@@ -33,16 +33,16 @@ const LangScroll = () => {
   return (
     <>
       <div className="slider-container">
-        <div className="pagination-button ">
+        <div className="pagination-button2 ">
           <button
-            className="border-button"
+            className="border-button3"
             onClick={handlePrevPage}
             disabled={currentPage === 0}
           >
             <FontAwesomeIcon icon={faChevronLeft} />
           </button>
           <button
-            className="border-button"
+            className="border-button4"
             onClick={handleNextPage}
             disabled={indexOfLastItem >= languageData.length}
           >
