@@ -13,7 +13,7 @@
   transition: transform 200ms ease;
 }
 .lang-poster:hover {
-  transition-delay: 1s;
+  transition-delay: 0.5s;
   transform: scale(1.5);
   z-index: 12;
 }
@@ -27,14 +27,14 @@
 }
 .border-button3 {
   position: relative;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 4%;
+  padding-bottom: 4%;
   padding-right: 2%;
 }
 .border-button4 {
   position: relative;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 4%;
+  padding-bottom: 4%;
   padding-left: 2%;
 }
 

@@ -12,13 +12,12 @@ const GenreMovies = ({ genre, apiUrl }) => {
       </div>
       <div className="movie-grid">
         <Scrollable apiUrl={apiUrl} />
-        
       </div>
     </div>
   );
 };
 
-const MovieCards = ({ isScrolled }) => {
+const MovieCards = () => {
   const [genres, setGenres] = useState([
     { name: "Mystery", apiUrl: "https://api.sampleapis.com/movies/mystery" },
     { name: "Family", apiUrl: "https://api.sampleapis.com/movies/family" },
@@ -67,7 +66,7 @@ const MovieCards = ({ isScrolled }) => {
   }, [genres, specialCardsRendered]);
 
   return (
-    <div className={`movie-cards ${isScrolled ? "scrolled" : ""}`}>
+    <div className="movie-cards">
       {genres.map((genre, index) => (
         <GenreMovies key={index} genre={genre.name} apiUrl={genre.apiUrl} />
       ))}
@@ -77,7 +76,7 @@ const MovieCards = ({ isScrolled }) => {
           <h5 className="lang-text">Popular Languages</h5>
           <LangScroll /> </div>} 
       </div>
-      <div className={`movie-cards ${isScrolled ? "scrolled" : ""}`}>
+      <div className="movie-cards">
       <GenreMovies key={109} genre="Animation" apiUrl="https://api.sampleapis.com/movies/animation" />
       </div>
       <div ref={bottomBoundaryRef}></div>

@@ -40,7 +40,11 @@ const Scrollable = ({ apiUrl }) => {
   });
   const currentItems = filteredMovieArr.slice(indexOfFirstItem, indexOfLastItem);
 
-
+  const clickedEvent = (event)=>{
+    const childElmnt = event.target.closest('.extended').closest('.genre-container')
+    const h5Element = childElmnt.querySelector(".genre-container .genre-text h5")
+    const genreText = h5Element.textContent
+  }
 
   return (
     <>
@@ -65,7 +69,7 @@ const Scrollable = ({ apiUrl }) => {
           {currentItems.map((d, index) => (
             <div key={d.id} className="movie-poster">
               <img src={d.posterURL} alt="movie poster" />
-              <Link to={`/detailed-view/${d.id}/${d.genre}`} className="extended">
+              <Link to={`/detailed-view/${d.id}/${d.genre}`} className="extended" onClick={clickedEvent}>
               <div className="extended">
                 <img src={d.posterURL} alt="movie-poster" />
                 <div className="extended-buttons">

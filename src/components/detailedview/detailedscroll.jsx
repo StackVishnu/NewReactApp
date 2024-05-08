@@ -1,11 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import Scrollable from "../cards/scrollable.jsx";
-import SpclCards from "../cards/specialcards.jsx"; 
-import LangScroll from "../cards/languagecards.jsx";
 import "../cards/moviecards.css";
 import "./detailedscroll.css"
 
-const GenreMovies = ({ genre, apiUrl }) => {
+const GenreMovie = ({ genre, apiUrl }) => {
   return (
       <>
       <div className="similar-text">
@@ -26,5 +24,5 @@ const GenreMovies = ({ genre, apiUrl }) => {
 
   );
 };
-export default GenreMovies
+export default GenreMovie
 

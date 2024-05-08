@@ -113,7 +113,7 @@
 .extended-buttons {
   display: flex;
   justify-content: space-between;
-  margin: 0 0.3rem 0 0.3rem; /* Buttons distributed horizontally */
+  padding: 0.2rem;
 }
 .extended-button1 {
   background-color: rgba(255, 255, 255, 0.904);
@@ -130,7 +130,8 @@
   border-radius: 0.2rem;
   color: #000000;
   font-family: "Roboto", sans-serif;
-  padding: 0.7rem, 0.5rem;
+  font-size: x-small;
+  padding: 0.4rem 0.4rem;
 }
 .extended-description {
   color: #ffffff;
@@ -138,6 +139,10 @@
 }
 .extended-description p {
   font-size: xx-small;
+}
+.extended-description h4 {
+  font-size: xx-small;
+  margin: 0;
 }
 .extended:hover {
   z-index: 12;

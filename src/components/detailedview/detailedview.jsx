@@ -1,8 +1,7 @@
 import React, { useState, useEffect} from "react";
-import GenreMovies from "./detailedscroll";
+import GenreMovie from "./detailedscroll";
 import VideoPlayer from "../mainpage/videoplayer";
 import VideoTitle from "../videotitle/videotitle";
-import MovieCards from "../cards/moviecards";
 import "../mainpage/mainpage.css";
 
 function DetailedView() {
@@ -40,7 +39,7 @@ function DetailedView() {
           />
         </div>
         <div className={`card-row`}>
-          <GenreMovies/>
+          <GenreMovie/>
         </div>
       </div>
     </>
