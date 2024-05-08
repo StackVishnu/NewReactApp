@@ -34,7 +34,7 @@ function VideoPlayer({ isScrolled, selectedImage, setSelectedImage }) {
         loop
         muted
         type="video/mp4"
-        className={`main-video ${isScrolled ? "scrolled" : ""}`}
+        className="main-video" 
       ></video>
     </div>
   );

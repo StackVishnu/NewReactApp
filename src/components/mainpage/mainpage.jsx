@@ -1,19 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import VideoPlayer from "./videoplayer";
 import VideoTitle from "../videotitle/videotitle";
 import MovieCards from "../cards/moviecards";
-import Footer from "../footer/footer";
 import "./mainpage.css";
 
 function MainPage() {
   const [selectedImage, setSelectedImage] = useState(null);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [showImage, setShowImage] = useState(true);
+  const [scrollOpacity, setScrollOpacity] = useState(1); // State for scroll opacity
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > window.innerHeight / 2);
+      const opacity = 1 - (scrollPosition / window.innerHeight) * 2; // Adjust factor as needed
+      setScrollOpacity(opacity < 0 ? 0 : opacity); // Ensure opacity does not go below 0
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -23,26 +22,24 @@ function MainPage() {
 
   return (
     <>
-      <div className="video-player-container">
+      <div
+        className="video-player-container"
+        style={{ opacity: scrollOpacity }} 
+      >
         <VideoPlayer
-          showImage={showImage}
-          isScrolled={isScrolled}
           selectedImage={selectedImage}
           setSelectedImage={setSelectedImage}
         />
       </div>
-      <div className="scroll-container">
+      <div className="scroll-container" >
         <div className="video-title">
           <VideoTitle
             selectedImage={selectedImage}
             setSelectedImage={setSelectedImage}
           />
         </div>
-        <div className={`card-row ${isScrolled ? "scrolled" : ""}`}>
-          <MovieCards
-            setSelectedImage={setSelectedImage}
-            isScrolled={isScrolled}
-          />
+        <div className={`card-row`}>
+          <MovieCards setSelectedImage={setSelectedImage} />
         </div>
       </div>
     </>

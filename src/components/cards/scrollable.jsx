@@ -77,7 +77,9 @@ const Scrollable = ({ apiUrl }) => {
                   <button className="extended-button2">+</button>
                 </div>
                 <div className="extended-description">
+                  <p>2012 • 2h24m • 4 languages</p>
                   <h4>{d.title}</h4>
+
                 </div>
               </div>
             </div>
