@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import "./moviecards.css";
@@ -64,6 +65,7 @@ const Scrollable = ({ apiUrl }) => {
           {currentItems.map((d, index) => (
             <div key={d.id} className="movie-poster">
               <img src={d.posterURL} alt="movie poster" />
+              <Link to={`/detailed-view/${d.id}/${d.genre}`} className="extended">
               <div className="extended">
                 <img src={d.posterURL} alt="movie-poster" />
                 <div className="extended-buttons">
@@ -82,6 +84,8 @@ const Scrollable = ({ apiUrl }) => {
 
                 </div>
               </div>
+              </Link>
+              
             </div>
           ))}
         </div>

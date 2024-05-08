@@ -1,0 +1,22 @@
+.horizontal-line {
+  border-bottom: 0.19rem solid rgba(37, 49, 63, 0.651); /* Adjust thickness and color as needed */
+  margin: 10px 0; /* Adjust margin as needed */
+  width: 100%;
+  margin-left: 8%;
+  padding: 1%;
+}
+.similar-text {
+  display: flex;
+  gap: 3%;
+  margin-left: 7.5%;
+  padding-top: 9%;
+}
+
+h5 {
+  font-size: larger;
+}
+.padding {
+  padding-bottom: 15%;
+}
+.genre-text h5 {
+}

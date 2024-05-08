@@ -88,8 +88,8 @@
 }
 
 .navbar-icons {
-  padding: 1.2rem;
-  width: 1.1rem;
+  padding: 1rem;
+  width: 1rem;
   height: 1.1rem;
   transition: transform 0.1s ease;
   color: rgba(201, 199, 199, 0.712);
@@ -125,4 +125,9 @@
 .icon-container:hover span {
   transform: scale(1.2);
   color: rgb(255, 255, 255);
+}
+.home-link {
+  display: inline-block;
+  padding: 0;
+  text-decoration: none;
 }
