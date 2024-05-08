@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router,Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { GenreProvider } from "./contexts/genrecontexts.jsx";
 import DetailedView from "./components/detailedview/detailedview.jsx";
 import NavBar from "./components/navbar/navbar.jsx";
 import MainPage from "./components/mainpage/mainpage.jsx";
@@ -12,10 +13,16 @@ function App() {
   return (
     <Router>
       <NavBar />
-    <Routes>
-        <Route exact path="/" element= {<MainPage />} />
-        <Route exact path="/detailed-view/:id/:genre" element={<DetailedView />} />
-    </Routes>
+      <GenreProvider>
+        <Routes>
+          <Route exact path="/" element={<MainPage />} />
+          <Route
+            exact
+            path="/detailed-view/:id/:genre"
+            element={<DetailedView />}
+          />
+        </Routes>
+      </GenreProvider>
       <Footer />
     </Router>
   );

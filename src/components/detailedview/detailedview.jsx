@@ -1,4 +1,5 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
+import { useGenre } from "../../contexts/genrecontexts";
 import GenreMovie from "./detailedscroll";
 import VideoPlayer from "../mainpage/videoplayer";
 import VideoTitle from "../videotitle/videotitle";
@@ -7,7 +8,8 @@ import "../mainpage/mainpage.css";
 function DetailedView() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [scrollOpacity, setScrollOpacity] = useState(1); // State for scroll opacity
-
+  const { genreText } = useGenre();
+  console.log(genreText);
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -24,14 +26,14 @@ function DetailedView() {
     <>
       <div
         className="video-player-container"
-        style={{ opacity: scrollOpacity }} 
+        style={{ opacity: scrollOpacity }}
       >
         <VideoPlayer
           selectedImage={selectedImage}
           setSelectedImage={setSelectedImage}
         />
       </div>
-      <div className="scroll-container" >
+      <div className="scroll-container">
         <div className="video-title">
           <VideoTitle
             selectedImage={selectedImage}
@@ -39,7 +41,7 @@ function DetailedView() {
           />
         </div>
         <div className={`card-row`}>
-          <GenreMovie/>
+          <GenreMovie />
         </div>
       </div>
     </>
