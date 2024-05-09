@@ -3,10 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import titleCard from "../../assets/avengers.png";
-import MultipleItems from "./titlescroll";
-import "./videotitle.css";
+import "../videotitle/videotitle.css";
 
-function VideoTitle({ selectedImage, setSelectedImage }) {
+function DetailedTitle({ selectedImage }) {
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
@@ -27,8 +26,9 @@ function VideoTitle({ selectedImage, setSelectedImage }) {
       ageRestriction: "U/A 16+",
       posterImg: "../../assets/avengers_poster.webp",
     };
+
     const { titleImage, movieSpecs, descriptionText, genres, ageRestriction } =
-      selectedImage || defaultData;
+      defaultData;
 
     return (
       <>
@@ -39,32 +39,27 @@ function VideoTitle({ selectedImage, setSelectedImage }) {
             className="title-card"
           />
           <h4 className="movie-specs">
-            {movieSpecs}
-            <span className="dot"></span>
-            <button className="age-restriction">{ageRestriction}</button>
+            {movieSpecs} <span className="dot"></span>{" "}
+            <button className="age-restriction">{18}</button>
           </h4>
         </div>
         <div className={`description ${isAnimating ? "fade" : ""}`}>
           <div className="description-text">
-            <p>{selectedImage?.title || descriptionText}</p>
-            <h4>{genres}</h4>
+            <p>{null}</p>
+            <h4>{selectedImage?.title}</h4>
           </div>
           <div className="subscribe-button">
             <button className="button-4" role="button">
               <FontAwesomeIcon
                 icon={faPlay}
                 style={{ color: "#ffffff", marginRight: "1rem" }}
-              />
+              />{" "}
               Subscribe to Watch
             </button>
             <button className="button-5" role="button">
               <FontAwesomeIcon icon={faPlus} style={{ color: "#ffffff" }} />
             </button>
-            <div>
-              <div>
-                <MultipleItems setSelectedImage={setSelectedImage} />
-              </div>
-            </div>
+            <div></div>
           </div>
         </div>
       </>
@@ -74,4 +69,4 @@ function VideoTitle({ selectedImage, setSelectedImage }) {
   return <div className="video-title">{renderVideoTitle()}</div>;
 }
 
-export default VideoTitle;
+export default DetailedTitle;

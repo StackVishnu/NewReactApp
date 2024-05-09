@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useGenre } from "../../contexts/genrecontexts";
 import Scrollable from "./scrollable.jsx";
 import SpclCards from "./specialcards.jsx"; 
 import LangScroll from "./languagecards.jsx";
@@ -64,7 +65,8 @@ const MovieCards = () => {
       setSpecialCardsRendered(true);
     }
   }, [genres, specialCardsRendered]);
-
+  const { genreText } = useGenre();
+  console.log(genreText);
   return (
     <div className="movie-cards">
       {genres.map((genre, index) => (

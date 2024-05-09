@@ -45,17 +45,7 @@ const Scrollable = ({ apiUrl }) => {
     indexOfLastItem
   );
 
-  const clickedEvent = (event) => {
-    const childElmnt = event.target
-      .closest(".extended")
-      .closest(".genre-container");
-    const h5Element = childElmnt.querySelector(
-      ".genre-container .genre-text h5"
-    );
-    const newGenreText = h5Element.textContent;
-    setGenreText(newGenreText);
-  };
-
+  console.log(genreText);
   return (
     <>
       <div className="slider-container">
@@ -86,9 +76,8 @@ const Scrollable = ({ apiUrl }) => {
             <div key={d.id} className="movie-poster">
               <img src={d.posterURL} alt="movie poster" />
               <Link
-                to={`/detailed-view/${d.id}/${d.genre}`}
+                to={`/detailed-view/${d.id}/${apiUrl.split("/").pop()}`}
                 className="extended"
-                onClick={clickedEvent}
               >
                 <div className="extended">
                   <img src={d.posterURL} alt="movie-poster" />
