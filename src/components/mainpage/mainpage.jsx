@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import VideoPlayer from "./videoplayer";
 import VideoTitle from "../videotitle/videotitle";
 import MovieCards from "../cards/moviecards";
@@ -24,18 +24,19 @@ function MainPage() {
     <>
       <div
         className="video-player-container"
-        style={{ opacity: scrollOpacity }} 
+        style={{ opacity: scrollOpacity }}
       >
         <VideoPlayer
           selectedImage={selectedImage}
           setSelectedImage={setSelectedImage}
         />
       </div>
-      <div className="scroll-container" >
+      <div className="scroll-container">
         <div className="video-title">
           <VideoTitle
             selectedImage={selectedImage}
             setSelectedImage={setSelectedImage}
+            shouldRender={true}
           />
         </div>
         <div className={`card-row`}>

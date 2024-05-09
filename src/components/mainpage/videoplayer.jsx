@@ -22,7 +22,7 @@ function VideoPlayer({ selectedImage }) {
     <div className="video-player">
       {showImage && (
         <img
-          src={selectedImage?.posterURL || image}
+          src={selectedImage?.posterURL || selectedImage?.posterImg || image}
           alt=""
           className="title-poster"
         />

@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import GenreMovie from "./detailedscroll";
 import VideoPlayer from "../mainpage/videoplayer";
-import DetailedTitle from "./detailedTitle";
+
 import VideoTitle from "../videotitle/videotitle";
 import "../mainpage/mainpage.css";
 
 function DetailedView() {
+  const shouldRender = false;
   const [selectedImage, setSelectedImage] = useState(null);
   const [scrollOpacity, setScrollOpacity] = useState(1); // State for scroll opacity
   const [movieData, setMovieData] = useState(null);
@@ -64,6 +65,7 @@ function DetailedView() {
           <VideoTitle
             selectedImage={movieData}
             setSelectedImage={setSelectedImage}
+            shouldRender={shouldRender}
           />
         </div>
         <div className={`card-row`}>

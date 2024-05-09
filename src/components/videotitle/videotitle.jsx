@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
@@ -6,14 +7,14 @@ import titleCard from "../../assets/avengers.png";
 import MultipleItems from "./titlescroll";
 import "./videotitle.css";
 
-function VideoTitle({ selectedImage, setSelectedImage }) {
-  const [isAnimating, setIsAnimating] = useState(false);
+function VideoTitle({ selectedImage, setSelectedImage, shouldRender }) {
+  const [showComponent, setShowComponent] = useState(false);
 
   useEffect(() => {
-    setIsAnimating(true);
     const timeout = setTimeout(() => {
-      setIsAnimating(false);
-    }, 400);
+      setShowComponent(true);
+    }, 500);
+
     return () => clearTimeout(timeout);
   }, [selectedImage]);
 
@@ -27,12 +28,13 @@ function VideoTitle({ selectedImage, setSelectedImage }) {
       ageRestriction: "U/A 16+",
       posterImg: "../../assets/avengers_poster.webp",
     };
+
     const { titleImage, movieSpecs, descriptionText, genres, ageRestriction } =
       selectedImage || defaultData;
 
     return (
-      <>
-        <div className={`title ${isAnimating ? "fade" : ""}`}>
+      <div className="video-title" style={{ opacity: showComponent ? 1 : 0 }}>
+        <div className="title">
           <img
             src={selectedImage?.posterURL || titleImage}
             alt="image"
@@ -44,7 +46,7 @@ function VideoTitle({ selectedImage, setSelectedImage }) {
             <button className="age-restriction">{ageRestriction}</button>
           </h4>
         </div>
-        <div className={`description ${isAnimating ? "fade" : ""}`}>
+        <div className="description">
           <div className="description-text">
             <p>{selectedImage?.title || descriptionText}</p>
             <h4>{genres}</h4>
@@ -62,16 +64,18 @@ function VideoTitle({ selectedImage, setSelectedImage }) {
             </button>
             <div>
               <div>
-                <MultipleItems setSelectedImage={setSelectedImage} />
+                {shouldRender && (
+                  <MultipleItems setSelectedImage={setSelectedImage} />
+                )}
               </div>
             </div>
           </div>
         </div>
-      </>
+      </div>
     );
   };
 
-  return <div className="video-title">{renderVideoTitle()}</div>;
+  return renderVideoTitle();
 }
 
 export default VideoTitle;

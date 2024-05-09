@@ -8,16 +8,7 @@
   position: relative;
   top: 2vh;
 }
-.fade {
-  opacity: 0; /* Initially invisible */
-  transition: opacity 0.5s ease; /* Transition opacity over 0.5 seconds with ease */
-}
 
-/* Define transition effect for the title and description */
-.title,
-.description {
-  transition: transform 0.5s ease, opacity 0.5s ease; /* Transition transform and opacity over 0.5 seconds with ease */
-}
 .description {
   top: 40vh;
   left: 18vh;
@@ -98,7 +89,7 @@ p {
   font-size: larger;
   flex-grow: 0;
   height: 3rem;
-  padding: 2.2vh 1.4vw;
+  padding: 1rem 1rem;
   margin: 1rem 1rem;
 }
 
@@ -108,13 +99,13 @@ p {
   border-radius: 0.5rem;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  text-align: center;
   font-weight: 600;
   font-size: large;
   flex-grow: 0;
   box-sizing: border-box;
   height: 3rem;
-  padding: 2vh 7vw;
+  padding: 1rem 6rem;
   margin: 1rem 0 1rem 0;
 }
 
@@ -142,4 +133,39 @@ p {
   font-weight: 600;
   font-size: medium;
   padding: 0.5vh 0.6vw;
+}
+.video-title {
+  transition: opacity 200ms ease;
+}
+
+@media screen and (max-width: 768px) {
+  .description-text {
+    width: 90vw;
+    font-size: 0.9rem;
+  }
+
+  .subscribe-button {
+    width: 90vw;
+  }
+  .subscribe-button .button-5,
+  .subscribe-button .button-4 {
+    width: 90vw;
+    padding: 1.5vh 3vw; /* Adjust padding */
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .description {
+    top: 30vh;
+  }
+
+  .description-text {
+    font-size: 0.8rem;
+  }
+  .subscribe-button .button-5,
+  .subscribe-button .button-4 {
+    font-size: 0.9rem;
+    padding: 1vh 2vw; /* Adjust padding */
+  }
 }
