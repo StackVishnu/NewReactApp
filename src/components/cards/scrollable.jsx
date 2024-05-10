@@ -5,13 +5,12 @@ import { useFavorites } from "../../contexts/favouritecontext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-
-import "./moviecards.css";
-
 import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+
+import "./moviecards.css";
 
 const Scrollable = ({ apiUrl }) => {
   const navigate = useNavigate();

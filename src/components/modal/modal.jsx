@@ -1,6 +1,7 @@
-import { easeOut, motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+
+import Scrollable2 from "../favoritelist/favoritelist";
 import Backdrop from "../backdrop/backdrop";
-import "./modal.css";
 
 function Modal({ handleClose, text }) {
   const dropIn = {
@@ -28,6 +29,7 @@ function Modal({ handleClose, text }) {
         animate="visible"
         exit="exit"
       />
+      <Scrollable2></Scrollable2>
     </Backdrop>
   );
 }
