@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useFavorites } from "../../contexts/favouritecontext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { useGenre } from "../../contexts/genrecontexts";
+
 import "./moviecards.css";
 
 import {
@@ -15,7 +16,8 @@ import {
 const Scrollable = ({ apiUrl }) => {
   const navigate = useNavigate();
   const [isGold, setIsGold] = useState(false);
-  const { genreText, setGenreText } = useGenre();
+  const { addFavorite, removeFavorite, isInFavorites } = useFavorites();
+
   const [movieArr, setMovieArr] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 8;
@@ -52,7 +54,12 @@ const Scrollable = ({ apiUrl }) => {
     const genre = apiUrl.split("/").pop();
     navigate(`/detailed-view/${id}/${genre}`);
   };
-  const toggle = () => {
+  const toggleFavorite = (id, title) => {
+    if (isInFavorites(title)) {
+      removeFavorite(title);
+    } else {
+      addFavorite(id, apiUrl.split("/").pop(), title);
+    }
     setIsGold(!isGold);
   };
 
@@ -105,12 +112,15 @@ const Scrollable = ({ apiUrl }) => {
                     className="extended-button2"
                     whileHover={{ scale: 1.3 }}
                     whileTap={{ scale: 0.9 }}
-                    onClick={toggle}
+                    onClick={() => toggleFavorite(d.id, d.title)}
                   >
                     <FontAwesomeIcon
                       icon={faStar}
                       className="favourite-icon"
-                      style={{ color: isGold ? "gold" : "white" }}
+                      style={{
+                        border: "none",
+                        color: isInFavorites(d.title) ? "gold" : "white",
+                      }}
                     />
                   </motion.button>
                 </div>

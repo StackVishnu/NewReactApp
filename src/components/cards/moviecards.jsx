@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useGenre } from "../../contexts/genrecontexts";
+
 import Scrollable from "./scrollable.jsx";
-import SpclCards from "./specialcards.jsx"; 
+import SpclCards from "./specialcards.jsx";
 import LangScroll from "./languagecards.jsx";
 import "./moviecards.css";
 
@@ -65,8 +65,7 @@ const MovieCards = () => {
       setSpecialCardsRendered(true);
     }
   }, [genres, specialCardsRendered]);
-  const { genreText } = useGenre();
-  console.log(genreText);
+
   return (
     <div className="movie-cards">
       {genres.map((genre, index) => (
@@ -74,12 +73,19 @@ const MovieCards = () => {
       ))}
       <div className="movie-grid2">
         {specialCardsRendered && <SpclCards />}
-        {specialCardsRendered && <div className="langcards">
-          <h5 className="lang-text">Popular Languages</h5>
-          <LangScroll /> </div>} 
+        {specialCardsRendered && (
+          <div className="langcards">
+            <h5 className="lang-text">Popular Languages</h5>
+            <LangScroll />{" "}
+          </div>
+        )}
       </div>
       <div className="movie-cards">
-      <GenreMovies key={109} genre="Animation" apiUrl="https://api.sampleapis.com/movies/animation" />
+        <GenreMovies
+          key={109}
+          genre="Animation"
+          apiUrl="https://api.sampleapis.com/movies/animation"
+        />
       </div>
       <div ref={bottomBoundaryRef}></div>
     </div>

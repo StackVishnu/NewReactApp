@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleUser } from "@fortawesome/free-regular-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
@@ -8,12 +9,23 @@ import { faVideo } from "@fortawesome/free-solid-svg-icons";
 import { faBaseball } from "@fortawesome/free-solid-svg-icons";
 import { faShapes } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { AnimatePresence } from "framer-motion";
+import Counter from "../counter/counter";
+import Modal from "../modal/modal";
 import logo from "../../assets/logo_icon.svg";
 
 import "./navbar.css";
 
 function NavBar() {
   const location = useLocation();
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const close = () => {
+    setModalOpen(false);
+  };
+  const open = () => {
+    setModalOpen(true);
+  };
   return (
     <>
       <nav className="navbar">
@@ -82,14 +94,20 @@ function NavBar() {
               </div>
             </li>
             <li>
-              <div className="icon-container">
+              <div
+                className="icon-container"
+                onClick={() => (modalOpen ? close() : open())}
+              >
                 <FontAwesomeIcon icon={faStar} className="navbar-icons" />
-                <span className="link-text">Favorites {"1"}</span>
+                <span className="link-text">Favorites</span>
               </div>
             </li>
           </ul>
         </div>
       </nav>
+      <AnimatePresence initial={false}>
+        {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
+      </AnimatePresence>
     </>
   );
 }

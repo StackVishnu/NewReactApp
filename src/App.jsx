@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { GenreProvider } from "./contexts/genrecontexts.jsx";
+import { FavoritesProvider } from "./contexts/favouritecontext.jsx";
 import DetailedView from "./components/detailedview/detailedview.jsx";
 import NavBar from "./components/navbar/navbar.jsx";
 import MainPage from "./components/mainpage/mainpage.jsx";
@@ -12,8 +12,9 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <NavBar />
-      <GenreProvider>
+      <FavoritesProvider>
+        <NavBar />
+
         <Routes>
           <Route exact path="/" element={<MainPage />} />
           <Route
@@ -22,8 +23,9 @@ function App() {
             element={<DetailedView />}
           />
         </Routes>
-      </GenreProvider>
-      <Footer />
+
+        <Footer />
+      </FavoritesProvider>
     </Router>
   );
 }
