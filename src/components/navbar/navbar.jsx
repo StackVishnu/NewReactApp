@@ -7,7 +7,7 @@ import { faTv } from "@fortawesome/free-solid-svg-icons";
 import { faVideo } from "@fortawesome/free-solid-svg-icons";
 import { faBaseball } from "@fortawesome/free-solid-svg-icons";
 import { faShapes } from "@fortawesome/free-solid-svg-icons";
-
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 import logo from "../../assets/logo_icon.svg";
 
 import "./navbar.css";
@@ -79,6 +79,12 @@ function NavBar() {
               <div className="icon-container">
                 <FontAwesomeIcon icon={faShapes} className="navbar-icons" />
                 <span className="link-text">Category</span>
+              </div>
+            </li>
+            <li>
+              <div className="icon-container">
+                <FontAwesomeIcon icon={faStar} className="navbar-icons" />
+                <span className="link-text">Favorites {"1"}</span>
               </div>
             </li>
           </ul>

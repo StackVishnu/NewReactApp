@@ -1,7 +1,9 @@
+import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { useGenre } from "../../contexts/genrecontexts";
 import "./moviecards.css";
 
@@ -11,6 +13,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Scrollable = ({ apiUrl }) => {
+  const navigate = useNavigate();
+  const [isGold, setIsGold] = useState(false);
   const { genreText, setGenreText } = useGenre();
   const [movieArr, setMovieArr] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
@@ -44,8 +48,15 @@ const Scrollable = ({ apiUrl }) => {
     indexOfFirstItem,
     indexOfLastItem
   );
+  const handleNavigation = (id, apiUrl) => {
+    const genre = apiUrl.split("/").pop();
+    navigate(`/detailed-view/${id}/${genre}`);
+  };
+  const toggle = () => {
+    setIsGold(!isGold);
+  };
 
-  console.log(genreText);
+  // console.log(genreText);
   return (
     <>
       <div className="slider-container">
@@ -75,28 +86,39 @@ const Scrollable = ({ apiUrl }) => {
           {currentItems.map((d, index) => (
             <div key={d.id} className="movie-poster">
               <img src={d.posterURL} alt="movie poster" />
-              <Link
-                to={`/detailed-view/${d.id}/${apiUrl.split("/").pop()}`}
-                className="extended"
-              >
-                <div className="extended">
-                  <img src={d.posterURL} alt="movie-poster" />
-                  <div className="extended-buttons">
-                    <button className="extended-button1">
-                      <FontAwesomeIcon
-                        icon={faPlay}
-                        style={{ color: "black", marginRight: "0.1rem" }}
-                      />
-                      Watch Now
-                    </button>
-                    <button className="extended-button2">+</button>
-                  </div>
-                  <div className="extended-description">
-                    <p>2012 • 2h24m • 4 languages</p>
-                    <h4>{d.title}</h4>
-                  </div>
+
+              <div className="extended">
+                <img src={d.posterURL} alt="movie-poster" />
+                <div className="extended-buttons">
+                  <button
+                    className="extended-button1"
+                    onClick={() => handleNavigation(d.id, apiUrl)}
+                  >
+                    <FontAwesomeIcon
+                      icon={faPlay}
+                      style={{ color: "black", marginRight: "0.1rem" }}
+                    />
+                    Watch Now
+                  </button>
+
+                  <motion.button
+                    className="extended-button2"
+                    whileHover={{ scale: 1.3 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={toggle}
+                  >
+                    <FontAwesomeIcon
+                      icon={faStar}
+                      className="favourite-icon"
+                      style={{ color: isGold ? "gold" : "white" }}
+                    />
+                  </motion.button>
                 </div>
-              </Link>
+                <div className="extended-description">
+                  <p>2012 • 2h24m • 4 languages</p>
+                  <h4>{d.title}</h4>
+                </div>
+              </div>
             </div>
           ))}
         </div>

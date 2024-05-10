@@ -41,9 +41,9 @@ function VideoTitle({ selectedImage, setSelectedImage, shouldRender }) {
             className="title-card"
           />
           <h4 className="movie-specs">
-            {movieSpecs}
-            <span className="dot"></span>
-            <button className="age-restriction">{ageRestriction}</button>
+            {"2012 • 2h24m • 4 languages"}
+
+            <button className="age-restriction">{"UA"}</button>
           </h4>
         </div>
         <div className="description">

@@ -42,7 +42,7 @@
 .movie-poster:hover {
   transition-delay: 1s;
   transform: scale(1.5);
-  z-index: 12;
+  z-index: 16;
 }
 
 .movie-poster:hover .hover-content {
@@ -113,7 +113,7 @@
 .extended-buttons {
   display: flex;
   justify-content: space-between;
-  padding: 0.2rem;
+  padding: 0.5rem;
 }
 .extended-button1 {
   background-color: rgba(255, 255, 255, 0.904);
@@ -125,13 +125,16 @@
   padding: 0.4rem 1.2rem;
 }
 .extended-button2 {
-  background-color: rgba(228, 228, 228, 0.219);
+  background-color: rgba(228, 228, 228, 0);
   border: none;
   border-radius: 0.2rem;
   color: #000000;
   font-family: "Roboto", sans-serif;
   font-size: x-small;
-  padding: 0.4rem 0.4rem;
+  padding: 0.1rem 0.1rem;
+}
+.favourite-icon {
+  size: 1%;
 }
 .extended-description {
   color: #ffffff;
@@ -145,7 +148,7 @@
   margin: 0;
 }
 .extended:hover {
-  z-index: 12;
+  z-index: 16;
   opacity: 1;
   transition-delay: 1s;
 }
