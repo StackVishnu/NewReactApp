@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
-
+import { color, motion } from "framer-motion";
 import Scrollable2 from "../favoritelist/favoritelist";
 import Backdrop from "../backdrop/backdrop";
+import "../modal/modal.css";
 
-function Modal({ handleClose, text }) {
+function Modal({ handleClose, favorites }) {
   const dropIn = {
     hidden: { y: "-100vh", opacity: 0 },
     visible: {
@@ -28,8 +28,13 @@ function Modal({ handleClose, text }) {
         initial="hidden"
         animate="visible"
         exit="exit"
-      />
-      <Scrollable2></Scrollable2>
+      >
+        {favorites.length > 0 ? (
+          <Scrollable2 favorites={favorites} />
+        ) : (
+          <p style={{ color: "black" }}>No movies in favorites</p>
+        )}
+      </motion.div>
     </Backdrop>
   );
 }

@@ -8,12 +8,11 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 import "../cards/moviecards.css";
 
-const Scrollable2 = () => {
-  const { favorites } = useFavorites();
+const Scrollable2 = ({ favorites }) => {
   const navigate = useNavigate();
   const [isGold, setIsGold] = useState(false);
   const { addFavorite, removeFavorite, isInFavorites } = useFavorites();
-  const [movieArr, setMovieArr] = useState([]);
+  const [movies, setMovies] = useState([]);
 
   const fetchMovieData = async (id, genre) => {
     try {
@@ -37,36 +36,32 @@ const Scrollable2 = () => {
             return movieData;
           })
         );
-        setMovieArr(fetchedMovies);
+        setMovies(fetchedMovies);
       } catch (error) {
         console.error("Error fetching movies:", error);
       }
     };
 
-    if (favorites.length > 0) {
-      fetchMovies();
-    }
+    fetchMovies();
   }, [favorites]);
 
   const handleNavigation = (id, genre) => {
     navigate(`/detailed-view/${id}/${genre}`);
   };
-  const toggleFavorite = (id, title) => {
+
+  const toggleFavorite = (id, title, genre) => {
     if (isInFavorites(title)) {
       removeFavorite(title);
     } else {
-      const urlParts = apiUrl.split("/");
-      const genre = urlParts[urlParts.length - 2];
       addFavorite(id, genre, title);
     }
     setIsGold(!isGold);
   };
 
-  // console.log(genreText);
   return (
     <>
-      {movieArr.map((d, index) => (
-        <div key={d.id} className="movie-poster">
+      {movies.map((d, index) => (
+        <motion.div key={d.id} className="movie-poster">
           <img src={d.posterURL} alt="movie poster" />
 
           <div className="extended">
@@ -87,7 +82,7 @@ const Scrollable2 = () => {
                 className="extended-button2"
                 whileHover={{ scale: 1.3 }}
                 whileTap={{ scale: 0.9 }}
-                onClick={() => toggleFavorite(d.id, d.title)}
+                onClick={() => toggleFavorite(d.id, d.title, d.genre)}
               >
                 <FontAwesomeIcon
                   icon={faStar}
@@ -104,7 +99,7 @@ const Scrollable2 = () => {
               <h4>{d.title}</h4>
             </div>
           </div>
-        </div>
+        </motion.div>
       ))}
     </>
   );

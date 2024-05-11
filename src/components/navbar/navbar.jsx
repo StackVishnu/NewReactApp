@@ -9,6 +9,7 @@ import { faVideo } from "@fortawesome/free-solid-svg-icons";
 import { faBaseball } from "@fortawesome/free-solid-svg-icons";
 import { faShapes } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { useFavorites } from "../../contexts/favouritecontext";
 import { AnimatePresence } from "framer-motion";
 import Counter from "../counter/counter";
 import Modal from "../modal/modal";
@@ -18,6 +19,7 @@ import "./navbar.css";
 
 function NavBar() {
   const location = useLocation();
+  const { favorites } = useFavorites();
   const [modalOpen, setModalOpen] = useState(false);
 
   const close = () => {
@@ -99,14 +101,22 @@ function NavBar() {
                 onClick={() => (modalOpen ? close() : open())}
               >
                 <FontAwesomeIcon icon={faStar} className="navbar-icons" />
-                <span className="link-text">Favorites</span>
+                <span className="link-text">
+                  Favorites <div></div>
+                </span>
               </div>
             </li>
           </ul>
         </div>
       </nav>
       <AnimatePresence initial={false}>
-        {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
+        {modalOpen && (
+          <Modal
+            modalOpen={modalOpen}
+            favorites={favorites}
+            handleClose={close}
+          />
+        )}
       </AnimatePresence>
     </>
   );
