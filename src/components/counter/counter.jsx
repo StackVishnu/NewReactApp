@@ -2,6 +2,7 @@ import { useFavorites } from "../../contexts/favouritecontext";
 
 function Counter() {
   const { favorites } = useFavorites();
-  return <div>Count:{favorites.length}</div>;
+  return favorites.length;
 }
+
 export default Counter;
