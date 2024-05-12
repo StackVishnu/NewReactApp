@@ -41,7 +41,13 @@ function Modal({ handleClose, favorites }) {
         {favorites.length > 0 ? (
           <Scrollable2 favorites={favorites} />
         ) : (
-          <p style={{ color: "black" }}>No movies in favorites</p>
+          <p
+            style={{
+              color: "white",
+            }}
+          >
+            No movies in favorites
+          </p>
         )}
       </motion.div>
     </Backdrop>

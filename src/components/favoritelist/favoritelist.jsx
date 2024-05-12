@@ -5,8 +5,10 @@ import { useFavorites } from "../../contexts/favouritecontext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-
-import "../cards/moviecards.css";
+import Slider from "react-slick"; // Import Slider
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./favoritelist.css";
 
 const Scrollable2 = ({ favorites }) => {
   const navigate = useNavigate();
@@ -58,12 +60,37 @@ const Scrollable2 = ({ favorites }) => {
     setIsGold(!isGold);
   };
 
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <>
-      {movies.map((d, index) => (
-        <motion.div key={d.id} className="movie-poster">
-          <img src={d.posterURL} alt="movie poster" />
+      {/* <Slider {...settings}> */}
 
+      {movies.map((d, index) => (
+        <div key={d.id} className="movie-poster">
+          <img src={d.posterURL} alt="movie poster" />
           <div className="extended">
             <img src={d.posterURL} alt="movie-poster" />
             <div className="extended-buttons">
@@ -99,8 +126,10 @@ const Scrollable2 = ({ favorites }) => {
               <h4>{d.title}</h4>
             </div>
           </div>
-        </motion.div>
+        </div>
       ))}
+
+      {/* </Slider> */}
     </>
   );
 };

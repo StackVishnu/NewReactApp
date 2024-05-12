@@ -1,11 +1,11 @@
 .modal {
-  width: clamp(50%, 768px, 90%);
-  height: min(50%, 300px);
-
+  width: clamp(70%, 768px, 90%);
+  height: min(70%, 500px);
+  text-align: center;
   margin: auto;
   padding: 0 2rem;
-  border-radius: 0.3rem;
   display: flex;
-  background: white;
-  z-index: 19;
+  border-radius: 0.3rem;
+  align-items: center;
+  background: rgb(92, 89, 89);
 }
