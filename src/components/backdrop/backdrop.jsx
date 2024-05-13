@@ -9,7 +9,7 @@ const Backdrop = ({ children, onClick }) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <h4>YOUR FAVORITES</h4>
+      <h5>YOUR FAVORITES</h5>
       {children}
     </motion.div>
   );

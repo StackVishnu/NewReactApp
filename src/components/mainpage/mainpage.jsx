@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import VideoPlayer from "./videoplayer";
 import VideoTitle from "../videotitle/videotitle";
 import MovieCards from "../cards/moviecards";
@@ -22,7 +23,10 @@ function MainPage() {
 
   return (
     <>
-      <div
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
         className="video-player-container"
         style={{ opacity: scrollOpacity }}
       >
@@ -30,8 +34,13 @@ function MainPage() {
           selectedImage={selectedImage}
           setSelectedImage={setSelectedImage}
         />
-      </div>
-      <div className="scroll-container">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="scroll-container"
+      >
         <div className="video-title">
           <VideoTitle
             selectedImage={selectedImage}
@@ -42,7 +51,7 @@ function MainPage() {
         <div className={`card-row`}>
           <MovieCards setSelectedImage={setSelectedImage} />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

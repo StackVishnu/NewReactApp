@@ -10,7 +10,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./favoritelist.css";
 
-const Scrollable2 = ({ favorites }) => {
+const Scrollable2 = ({ favorites, handleClose }) => {
   const navigate = useNavigate();
   const [isGold, setIsGold] = useState(false);
   const { addFavorite, removeFavorite, isInFavorites } = useFavorites();
@@ -96,7 +96,10 @@ const Scrollable2 = ({ favorites }) => {
             <div className="extended-buttons">
               <button
                 className="extended-button1"
-                onClick={() => handleNavigation(d.id, d.genre)}
+                onClick={() => {
+                  handleNavigation(d.id, d.genre);
+                  handleClose();
+                }}
               >
                 <FontAwesomeIcon
                   icon={faPlay}

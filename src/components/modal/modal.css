@@ -5,7 +5,8 @@
   margin: auto;
   padding: 0 2rem;
   display: flex;
+  gap: 0.3rem;
   border-radius: 0.3rem;
   align-items: center;
-  background: rgb(92, 89, 89);
+  background: rgb(43, 43, 43);
 }

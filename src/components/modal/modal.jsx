@@ -39,7 +39,7 @@ function Modal({ handleClose, favorites }) {
         exit="exit"
       >
         {favorites.length > 0 ? (
-          <Scrollable2 favorites={favorites} />
+          <Scrollable2 favorites={favorites} handleClose={handleClose} />
         ) : (
           <p
             style={{

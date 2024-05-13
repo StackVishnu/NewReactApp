@@ -103,8 +103,10 @@ function NavBar() {
                 <FontAwesomeIcon icon={faStar} className="navbar-icons" />
                 <span className="link-text">
                   Favorites{" "}
-                  <span>
-                    <Counter></Counter>
+                  <span className="counter-span">
+                    <button className="counter-badge">
+                      <Counter></Counter>
+                    </button>
                   </span>
                 </span>
               </div>
