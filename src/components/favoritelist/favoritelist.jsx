@@ -16,6 +16,9 @@ const Scrollable2 = ({ favorites, handleClose }) => {
   const { addFavorite, removeFavorite, isInFavorites } = useFavorites();
   const [movies, setMovies] = useState([]);
 
+  const [currentPage, setCurrentPage] = useState(0);
+  const moviesPerPage = 4;
+
   const fetchMovieData = async (id, genre) => {
     try {
       const response = await fetch(
@@ -60,81 +63,94 @@ const Scrollable2 = ({ favorites, handleClose }) => {
     setIsGold(!isGold);
   };
 
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+  const totalPages = Math.ceil(movies.length / moviesPerPage);
+
+  const handlePrevPage = () => {
+    setCurrentPage((prevPage) => Math.max(prevPage - 1, 0));
   };
 
-  return (
-    <>
-      {/* <Slider {...settings}> */}
+  const handleNextPage = () => {
+    setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages - 1));
+  };
 
-      {movies.map((d, index) => (
-        <div key={d.id} className="movie-poster">
-          <img src={d.posterURL} alt="movie poster" />
-          <div className="extended">
-            <img src={d.posterURL} alt="movie-poster" />
-            <div className="extended-buttons">
-              <button
-                className="extended-button1"
-                onClick={() => {
-                  handleNavigation(d.id, d.genre);
-                  handleClose();
-                }}
-              >
-                <FontAwesomeIcon
-                  icon={faPlay}
-                  style={{ color: "black", marginRight: "0.1rem" }}
-                />
-                Watch Now
-              </button>
-
-              <motion.button
-                className="extended-button2"
-                whileHover={{ scale: 1.3 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => toggleFavorite(d.id, d.title, d.genre)}
-              >
-                <FontAwesomeIcon
-                  icon={faStar}
-                  className="favourite-icon"
-                  style={{
-                    border: "none",
-                    color: isInFavorites(d.title) ? "gold" : "white",
+  // const settings = {
+  //   dots: false,
+  //   infinite: false,
+  //   speed: 500,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //   ],
+  // };
+  const currentRender = () => {
+    const startIndex = currentPage * moviesPerPage;
+    const endIndex = startIndex + moviesPerPage;
+    return (
+      <>
+        {/* <Slider {...settings}> */}
+        {movies.slice(startIndex, endIndex).map((d, index) => (
+          <div key={d.id} className="movie-poster">
+            <img src={d.posterURL} alt="movie poster" />
+            <div className="extended">
+              <img src={d.posterURL} alt="movie-poster" />
+              <div className="extended-buttons">
+                <button
+                  className="extended-button1"
+                  onClick={() => {
+                    handleNavigation(d.id, d.genre);
+                    handleClose();
                   }}
-                />
-              </motion.button>
-            </div>
-            <div className="extended-description">
-              <p>2012 • 2h24m • 4 languages</p>
-              <h4>{d.title}</h4>
+                >
+                  <FontAwesomeIcon
+                    icon={faPlay}
+                    style={{ color: "black", marginRight: "0.1rem" }}
+                  />
+                  Watch Now
+                </button>
+
+                <motion.button
+                  className="extended-button2"
+                  whileHover={{ scale: 1.3 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => toggleFavorite(d.id, d.title, d.genre)}
+                >
+                  <FontAwesomeIcon
+                    icon={faStar}
+                    className="favourite-icon"
+                    style={{
+                      border: "none",
+                      color: isInFavorites(d.title) ? "gold" : "white",
+                    }}
+                  />
+                </motion.button>
+              </div>
+              <div className="extended-description">
+                <p>2012 • 2h24m • 4 languages</p>
+                <h4>{d.title}</h4>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
 
-      {/* </Slider> */}
-    </>
-  );
+        {/* </Slider> */}
+      </>
+    );
+  };
+  return currentRender();
 };
 
 export default Scrollable2;
