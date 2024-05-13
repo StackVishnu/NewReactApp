@@ -5,6 +5,10 @@ import { useFavorites } from "../../contexts/favouritecontext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 import Slider from "react-slick"; // Import Slider
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -17,7 +21,7 @@ const Scrollable2 = ({ favorites, handleClose }) => {
   const [movies, setMovies] = useState([]);
 
   const [currentPage, setCurrentPage] = useState(0);
-  const moviesPerPage = 4;
+  const moviesPerPage = 3;
 
   const fetchMovieData = async (id, genre) => {
     try {
@@ -101,6 +105,20 @@ const Scrollable2 = ({ favorites, handleClose }) => {
     const endIndex = startIndex + moviesPerPage;
     return (
       <>
+        <motion.button
+          whileHover={{ scale: 1.2 }}
+          whileTap={{
+            scale: 0.8,
+            translateX: -5,
+          }}
+          className="prev-page-button page-buttons"
+          onClick={handlePrevPage}
+        >
+          <FontAwesomeIcon
+            icon={faChevronLeft}
+            style={{ paddingRight: "1rem" }}
+          />
+        </motion.button>
         {/* <Slider {...settings}> */}
         {movies.slice(startIndex, endIndex).map((d, index) => (
           <div key={d.id} className="movie-poster">
@@ -145,7 +163,20 @@ const Scrollable2 = ({ favorites, handleClose }) => {
             </div>
           </div>
         ))}
-
+        <motion.button
+          whileHover={{ scale: 1.2 }}
+          whileTap={{
+            scale: 0.8,
+            translateX: 5,
+          }}
+          className="next-page-button page-buttons"
+          onClick={handleNextPage}
+        >
+          <FontAwesomeIcon
+            icon={faChevronRight}
+            style={{ paddingRight: "1rem" }}
+          />
+        </motion.button>
         {/* </Slider> */}
       </>
     );

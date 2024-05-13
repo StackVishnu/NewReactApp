@@ -1,0 +1,9 @@
+.page-buttons {
+  background-color: #00000062;
+  color: #fff;
+  border: none;
+  padding: 0.3rem;
+  border-radius: 1rem;
+  transition: background-color 0.3s;
+  font-weight: bolder;
+}

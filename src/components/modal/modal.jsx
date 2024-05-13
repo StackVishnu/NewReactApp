@@ -38,13 +38,11 @@ function Modal({ handleClose, favorites }) {
         animate="visible"
         exit="exit"
       >
-        <button className="page-button1">vvv</button>
         {favorites.length > 0 ? (
           <Scrollable2 favorites={favorites} handleClose={handleClose} />
         ) : (
           <p>No movies in favorites</p>
         )}
-        <button className="page-button2">www</button>
       </motion.div>
     </Backdrop>
   );
