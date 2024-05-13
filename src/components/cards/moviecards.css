@@ -108,7 +108,7 @@
 }
 .extended img {
   height: 45%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 .extended-buttons {
@@ -159,4 +159,80 @@
 .langcards h5 {
   position: relative;
   left: 7vw;
+}
+
+@media (max-width: 767px) {
+  .slider-container {
+    max-width: 90vw;
+    height: 30vh;
+    left: 5vw;
+  }
+
+  .movie-poster img {
+    max-height: 28vh;
+  }
+
+  .genre-text h5 {
+    padding-left: 2rem;
+  }
+
+  .slider-main {
+    width: 100vw;
+    left: 0;
+  }
+
+  .pagination-button {
+    width: 98vw;
+    padding-right: 2%;
+  }
+
+  .extended {
+    width: 90%;
+    left: 5%;
+  }
+
+  .langcards h5 {
+    left: 5vw;
+  }
+}
+
+/* Styles for medium screens (e.g., tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .slider-container {
+    max-width: 60vw;
+    height: 40vh;
+    left: 5vw;
+  }
+
+  .movie-poster img {
+    max-height: 38vh;
+  }
+
+  .genre-text h5 {
+    padding-left: 4rem;
+  }
+
+  .slider-main {
+    width: 95vw;
+    left: 2.5vw;
+  }
+
+  .pagination-button {
+    width: 97vw;
+    padding-right: 3%;
+  }
+
+  .extended {
+    width: 80%;
+    left: 10%;
+  }
+
+  .langcards h5 {
+    left: 5vw;
+  }
+}
+
+/* Styles for large screens (e.g., desktops) */
+@media (min-width: 1024px) {
+  /* Existing styles for large screens */
 }

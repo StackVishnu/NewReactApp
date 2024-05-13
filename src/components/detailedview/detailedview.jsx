@@ -68,7 +68,7 @@ function DetailedView() {
             shouldRender={shouldRender}
           />
         </div>
-        <div className={`card-row`}>
+        <div className={`card-row2`}>
           <GenreMovie />
         </div>
       </div>

@@ -174,7 +174,7 @@ const Scrollable2 = ({ favorites, handleClose }) => {
         >
           <FontAwesomeIcon
             icon={faChevronRight}
-            style={{ paddingRight: "1rem" }}
+            style={{ paddingLeft: "1rem" }}
           />
         </motion.button>
         {/* </Slider> */}

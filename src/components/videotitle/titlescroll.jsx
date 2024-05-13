@@ -43,7 +43,7 @@ function MultipleItems({ setSelectedImage }) {
     posterVid: video2,
   };
   return (
-    <div className="slider-container">
+    <div className="slider-container2">
       <Slider {...settings}>
         <div className="title-scroll-container">
           <img

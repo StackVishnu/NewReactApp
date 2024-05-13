@@ -62,12 +62,10 @@ function VideoTitle({ selectedImage, setSelectedImage, shouldRender }) {
             <button className="button-5" role="button">
               <FontAwesomeIcon icon={faPlus} style={{ color: "#ffffff" }} />
             </button>
-            <div>
-              <div>
-                {shouldRender && (
-                  <MultipleItems setSelectedImage={setSelectedImage} />
-                )}
-              </div>
+            <div className="multiple-container">
+              {shouldRender && (
+                <MultipleItems setSelectedImage={setSelectedImage} />
+              )}
             </div>
           </div>
         </div>
