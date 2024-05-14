@@ -50,7 +50,7 @@ const MovieCards = () => {
           loadMoreGenres();
         }
       },
-      { threshold: 0.5 }
+      { threshold: 1 }
     );
 
     observer.observe(bottomBoundaryRef.current);
@@ -58,7 +58,7 @@ const MovieCards = () => {
     return () => {
       observer.disconnect();
     };
-  }, [genres]);
+  }, []);
 
   useEffect(() => {
     if (genres.length > 3 && !specialCardsRendered) {
