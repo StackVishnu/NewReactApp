@@ -3,6 +3,11 @@
   left: 18vw;
   max-width: 30vw;
   bottom: 0vh;
+  opacity: 0.5;
+}
+
+.slider-container2:hover {
+  opacity: 1;
 }
 
 .title-scroll-container img {
