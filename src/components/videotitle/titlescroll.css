@@ -1,9 +1,9 @@
 .slider-container3 {
   position: relative;
-  left: 18vw;
-  max-width: 30vw;
+  max-width: 20vw;
   bottom: 0vh;
   opacity: 0.5;
+  align-self: flex-end;
 }
 
 .slider-container3:hover {
@@ -33,6 +33,5 @@
     position: relative;
     left: 0;
     max-width: 30vw;
-    bottom: 2vh;
   }
 }

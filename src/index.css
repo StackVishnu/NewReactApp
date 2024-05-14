@@ -4,3 +4,13 @@ body {
   background-color: black;
   overflow-x: hidden;
 }
+@media (max-width: 768px) {
+  body {
+    font-size: small;
+  }
+}
+@media (max-width: 576px) {
+  body {
+    font-size: small;
+  }
+}

@@ -121,7 +121,7 @@ const Scrollable2 = ({ favorites, handleClose }) => {
         </motion.button>
         {/* <Slider {...settings}> */}
         {movies.slice(startIndex, endIndex).map((d, index) => (
-          <div key={d.id} className="movie-poster">
+          <motion.div key={d.id} className="movie-poster">
             <img src={d.posterURL} alt="movie poster" />
             <div className="extended">
               <img src={d.posterURL} alt="movie-poster" />
@@ -161,7 +161,7 @@ const Scrollable2 = ({ favorites, handleClose }) => {
                 <h4>{d.title}</h4>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
         <motion.button
           whileHover={{ scale: 1.2 }}

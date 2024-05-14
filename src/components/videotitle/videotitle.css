@@ -42,7 +42,6 @@ p {
   line-height: 1.5; /* Adjust line spacing */
 }
 .subscribe-button {
-  position: relative;
   top: 8vh;
 }
 .title-card {
@@ -56,6 +55,9 @@ p {
   height: auto;
   width: auto;
   object-fit: cover;
+}
+.multiple-container {
+  margin-left: auto;
 }
 
 .description-text h4 {
@@ -143,7 +145,8 @@ p {
   }
 
   .subscribe-button {
-    width: 90vw;
+    width: 65vw;
+    gap: 1rem;
   }
   .subscribe-button .button-5 {
     font-size: medium;
