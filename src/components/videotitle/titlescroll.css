@@ -1,4 +1,4 @@
-.slider-container2 {
+.slider-container3 {
   position: relative;
   left: 18vw;
   max-width: 30vw;
@@ -6,7 +6,7 @@
   opacity: 0.5;
 }
 
-.slider-container2:hover {
+.slider-container3:hover {
   opacity: 1;
 }
 
@@ -29,7 +29,7 @@
   top: 3vh;
 }
 @media (max-width: 768px) {
-  .slider-container2 {
+  .slider-container3 {
     position: relative;
     left: 0;
     max-width: 30vw;
